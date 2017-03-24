@@ -42,7 +42,7 @@
 		184D9116D00295ADF28113A4 /* Pods-CatalogApplicationUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatalogApplicationUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CatalogApplicationUITests/Pods-CatalogApplicationUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		31E894FF1E84998F0038E70A /* CatalogApplication.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CatalogApplication.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		31E895021E84998F0038E70A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		31E895041E84998F0038E70A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		31E895041E84998F0038E70A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		31E895071E84998F0038E70A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		31E895091E84998F0038E70A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		31E8950C1E84998F0038E70A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -95,9 +95,9 @@
 				31E895011E84998F0038E70A /* CatalogApplication */,
 				31E895161E84998F0038E70A /* CatalogApplicationTests */,
 				31E895211E84998F0038E70A /* CatalogApplicationUITests */,
-				31E895001E84998F0038E70A /* Products */,
-				BBF55ED39AC3116D00B23277 /* Pods */,
 				69D1DD644063E3F7F1C454E2 /* Frameworks */,
+				BBF55ED39AC3116D00B23277 /* Pods */,
+				31E895001E84998F0038E70A /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -114,11 +114,13 @@
 		31E895011E84998F0038E70A /* CatalogApplication */ = {
 			isa = PBXGroup;
 			children = (
+				31E895351E8583E90038E70A /* DataAccess */,
+				31E8953A1E8584700038E70A /* Models */,
+				31E895391E8584580038E70A /* Utilities */,
+				31E895311E8583970038E70A /* ViewControllers */,
+				31E895321E8583A50038E70A /* Views */,
 				31E895021E84998F0038E70A /* AppDelegate.swift */,
-				31E895041E84998F0038E70A /* ViewController.swift */,
-				31E895061E84998F0038E70A /* Main.storyboard */,
 				31E895091E84998F0038E70A /* Assets.xcassets */,
-				31E8950B1E84998F0038E70A /* LaunchScreen.storyboard */,
 				31E8950E1E84998F0038E70A /* Info.plist */,
 			);
 			path = CatalogApplication;
@@ -140,6 +142,84 @@
 				31E895241E84998F0038E70A /* Info.plist */,
 			);
 			path = CatalogApplicationUITests;
+			sourceTree = "<group>";
+		};
+		31E895311E8583970038E70A /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				31E895041E84998F0038E70A /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		31E895321E8583A50038E70A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				31E895341E8583D40038E70A /* ReusableViews */,
+				31E895331E8583CB0038E70A /* Storyboards */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		31E895331E8583CB0038E70A /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				31E8950B1E84998F0038E70A /* LaunchScreen.storyboard */,
+				31E895061E84998F0038E70A /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		31E895341E8583D40038E70A /* ReusableViews */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ReusableViews;
+			sourceTree = "<group>";
+		};
+		31E895351E8583E90038E70A /* DataAccess */ = {
+			isa = PBXGroup;
+			children = (
+				31E895371E8584390038E70A /* DataLayers */,
+				31E895381E85844A0038E70A /* Routers */,
+				31E895361E8584270038E70A /* Services */,
+			);
+			path = DataAccess;
+			sourceTree = "<group>";
+		};
+		31E895361E8584270038E70A /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		31E895371E8584390038E70A /* DataLayers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DataLayers;
+			sourceTree = "<group>";
+		};
+		31E895381E85844A0038E70A /* Routers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Routers;
+			sourceTree = "<group>";
+		};
+		31E895391E8584580038E70A /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		31E8953A1E8584700038E70A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		69D1DD644063E3F7F1C454E2 /* Frameworks */ = {
@@ -489,6 +569,7 @@
 				31E895071E84998F0038E70A /* Base */,
 			);
 			name = Main.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 		31E8950B1E84998F0038E70A /* LaunchScreen.storyboard */ = {
@@ -497,6 +578,7 @@
 				31E8950C1E84998F0038E70A /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -698,6 +780,7 @@
 				31E895291E84998F0038E70A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		31E8952A1E84998F0038E70A /* Build configuration list for PBXNativeTarget "CatalogApplicationTests" */ = {
 			isa = XCConfigurationList;
@@ -706,6 +789,7 @@
 				31E8952C1E84998F0038E70A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		31E8952D1E84998F0038E70A /* Build configuration list for PBXNativeTarget "CatalogApplicationUITests" */ = {
 			isa = XCConfigurationList;
@@ -714,6 +798,7 @@
 				31E8952F1E84998F0038E70A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
