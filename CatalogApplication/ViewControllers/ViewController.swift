@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FacebookCore
 import FacebookLogin
 
 class ViewController: UIViewController {
@@ -25,13 +26,27 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        checkLoginStatus()
+    }
 
+    func checkLoginStatus() {
+        if let _ = AccessToken.current {
+            userLoggedIn()
+        }
+    }
+    func userLoggedIn() {
+        self.performSegue(withIdentifier: "loginSegue", sender: self)
+    }
 
 }
 
 extension ViewController: LoginButtonDelegate {
     func loginButtonDidCompleteLogin(_ loginButton: LoginButton, result: LoginResult) {
-        performSegue(withIdentifier: "loginSegue", sender: self)
+        userLoggedIn()
     }
     
     func loginButtonDidLogOut(_ loginButton: LoginButton) {
