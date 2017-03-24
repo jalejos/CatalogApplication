@@ -16,10 +16,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        let loginButton = LoginButton(readPermissions: [.publicProfile])
-        loginButton.center = view.center
-        loginButton.delegate = self
-        view.addSubview(loginButton)
+        setupLoginButton()
     }
 
     override func didReceiveMemoryWarning() {
@@ -38,6 +35,14 @@ class ViewController: UIViewController {
             userLoggedIn()
         }
     }
+    
+    func setupLoginButton() {
+        let loginButton = LoginButton(readPermissions: [.publicProfile])
+        loginButton.center = view.center
+        loginButton.delegate = self
+        view.addSubview(loginButton)
+    }
+    
     func userLoggedIn() {
         self.performSegue(withIdentifier: "loginSegue", sender: self)
     }
