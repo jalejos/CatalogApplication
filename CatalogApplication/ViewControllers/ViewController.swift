@@ -14,8 +14,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
         let loginButton = LoginButton(readPermissions: [.publicProfile])
         loginButton.center = view.center
+        loginButton.delegate = self
         view.addSubview(loginButton)
     }
 
@@ -27,3 +29,12 @@ class ViewController: UIViewController {
 
 }
 
+extension ViewController: LoginButtonDelegate {
+    func loginButtonDidCompleteLogin(_ loginButton: LoginButton, result: LoginResult) {
+        performSegue(withIdentifier: "loginSegue", sender: self)
+    }
+    
+    func loginButtonDidLogOut(_ loginButton: LoginButton) {
+        
+    }
+}
