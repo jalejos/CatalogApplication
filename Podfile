@@ -10,6 +10,9 @@ target 'CatalogApplication' do
   pod 'AlamofireImage', '~> 3.1'
   pod 'RealmSwift', '~> 2.4'
   pod 'ObjectMapper', '~> 2.2'
+  pod 'FacebookCore', '0.2.0'
+  pod 'FacebookLogin', '0.2.0'
+  pod 'FacebookShare', '0.2.0'
 
   target 'CatalogApplicationTests' do
     inherit! :search_paths
