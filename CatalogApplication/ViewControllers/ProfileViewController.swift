@@ -22,7 +22,7 @@ class ProfileViewController: UIViewController {
     }
     
     func setupLogoutButton() {
-        let loginButton = LoginButton(readPermissions: [.publicProfile])
+        let loginButton = LoginButton(readPermissions: [.publicProfile, .email])
         loginButton.center = view.center
         loginButton.delegate = self
         view.addSubview(loginButton)
