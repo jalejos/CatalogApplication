@@ -18,6 +18,7 @@
 		31F182831E898BDE002635CA /* MoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F182821E898BDE002635CA /* MoviesViewController.swift */; };
 		31F182851E898C4E002635CA /* MediaTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31F182841E898C4E002635CA /* MediaTableViewCell.xib */; };
 		31F182871E898D87002635CA /* MediaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F182861E898D87002635CA /* MediaTableViewCell.swift */; };
+		31F182891E89B963002635CA /* MoviesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F182881E89B963002635CA /* MoviesService.swift */; };
 		31F1828D1E89B995002635CA /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F1828C1E89B995002635CA /* APIManager.swift */; };
 		31F182911E89BE73002635CA /* MediaRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F182901E89BE73002635CA /* MediaRouter.swift */; };
 		7D872E0AD77552922A4D72DC /* Pods_CatalogApplication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 086D1B6E6FCDE95D99E2EF53 /* Pods_CatalogApplication.framework */; };
@@ -63,6 +64,7 @@
 		31F182821E898BDE002635CA /* MoviesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviesViewController.swift; sourceTree = "<group>"; };
 		31F182841E898C4E002635CA /* MediaTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MediaTableViewCell.xib; path = CatalogApplication/ViewControllers/MediaTableViewCell.xib; sourceTree = SOURCE_ROOT; };
 		31F182861E898D87002635CA /* MediaTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MediaTableViewCell.swift; path = CatalogApplication/ViewControllers/MediaTableViewCell.swift; sourceTree = SOURCE_ROOT; };
+		31F182881E89B963002635CA /* MoviesService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MoviesService.swift; path = CatalogApplication/ViewControllers/MoviesService.swift; sourceTree = SOURCE_ROOT; };
 		31F1828C1E89B995002635CA /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = APIManager.swift; path = CatalogApplication/ViewControllers/APIManager.swift; sourceTree = SOURCE_ROOT; };
 		31F182901E89BE73002635CA /* MediaRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MediaRouter.swift; path = CatalogApplication/ViewControllers/MediaRouter.swift; sourceTree = SOURCE_ROOT; };
 		3A3CBF246F36011EB0611C04 /* Pods-CatalogApplicationTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatalogApplicationTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CatalogApplicationTests/Pods-CatalogApplicationTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -206,6 +208,7 @@
 		31E895361E8584270038E70A /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				31F182881E89B963002635CA /* MoviesService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -548,6 +551,7 @@
 				31F1828D1E89B995002635CA /* APIManager.swift in Sources */,
 				31F182811E898A27002635CA /* MediaTableViewController.swift in Sources */,
 				31E895051E84998F0038E70A /* ViewController.swift in Sources */,
+				31F182891E89B963002635CA /* MoviesService.swift in Sources */,
 				31F182911E89BE73002635CA /* MediaRouter.swift in Sources */,
 				31E895031E84998F0038E70A /* AppDelegate.swift in Sources */,
 				31F182831E898BDE002635CA /* MoviesViewController.swift in Sources */,
