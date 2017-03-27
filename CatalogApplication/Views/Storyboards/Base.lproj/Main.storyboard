@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -23,11 +24,13 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <connections>
-                        <segue destination="fS2-lc-4Cb" kind="presentation" identifier="loginSegue" id="MDf-Gl-OYn"/>
+                        <segue destination="fS2-lc-4Cb" kind="presentation" identifier="loginSegue" modalPresentationStyle="currentContext" id="MDf-Gl-OYn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="sYO-ZJ-90v" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
+            <point key="canvasLocation" x="97" y="36"/>
         </scene>
         <!--Books-->
         <scene sceneID="MPV-8f-Pbj">
@@ -85,12 +88,11 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iDO-PF-W7g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="945" y="37"/>
+            <point key="canvasLocation" x="948" y="36"/>
         </scene>
         <!--Top 20s-->
         <scene sceneID="Sv8-vg-C6t">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="lPC-jF-wLw" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="ADx-hr-gQk" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="7b5-0H-MUr"/>
@@ -103,14 +105,14 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Top 20s" image="star-icon" id="stj-rz-VoI"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lPC-jF-wLw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1857" y="369"/>
         </scene>
         <!--Profile-->
         <scene sceneID="jAQ-X8-0aN">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="75d-ix-ovn" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="1WH-ng-DqM" sceneMemberID="viewController">
+                <viewController id="1WH-ng-DqM" customClass="ProfileViewController" customModule="CatalogApplication" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="6p5-GI-0bt"/>
                         <viewControllerLayoutGuide type="bottom" id="zzP-Zj-vwO"/>
@@ -118,12 +120,48 @@
                     <view key="view" contentMode="scaleToFill" id="gVT-gg-d9c">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YlW-4P-sA0">
+                                <rect key="frame" x="97" y="28" width="180" height="180"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="180" id="d8q-9j-Jhg"/>
+                                    <constraint firstAttribute="width" secondItem="YlW-4P-sA0" secondAttribute="height" multiplier="1:1" id="qxY-Ae-34e"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User profile name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yn9-LC-saH">
+                                <rect key="frame" x="119.5" y="216" width="135.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="user@email.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="czL-cA-TdS">
+                                <rect key="frame" x="124" y="287" width="127" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="yn9-LC-saH" firstAttribute="centerX" secondItem="gVT-gg-d9c" secondAttribute="centerX" id="7TP-yF-gNV"/>
+                            <constraint firstItem="yn9-LC-saH" firstAttribute="top" secondItem="YlW-4P-sA0" secondAttribute="bottom" constant="8" id="9Mf-9N-0dG"/>
+                            <constraint firstItem="YlW-4P-sA0" firstAttribute="top" secondItem="6p5-GI-0bt" secondAttribute="bottom" constant="8" id="TmD-bM-fvl"/>
+                            <constraint firstItem="YlW-4P-sA0" firstAttribute="centerX" secondItem="gVT-gg-d9c" secondAttribute="centerX" id="fNa-5u-zva"/>
+                            <constraint firstItem="czL-cA-TdS" firstAttribute="centerX" secondItem="gVT-gg-d9c" secondAttribute="centerX" id="llh-fZ-dgc"/>
+                            <constraint firstItem="czL-cA-TdS" firstAttribute="top" secondItem="yn9-LC-saH" secondAttribute="bottom" constant="50" id="ukh-Np-6YW"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" image="profile-icon" id="KiM-QM-WEX"/>
+                    <connections>
+                        <outlet property="emailLabel" destination="czL-cA-TdS" id="PVh-8d-zyf"/>
+                        <outlet property="nameLabel" destination="yn9-LC-saH" id="iiy-v6-jGs"/>
+                        <outlet property="profileImageView" destination="YlW-4P-sA0" id="2bM-zF-QTB"/>
+                        <segue destination="sYO-ZJ-90v" kind="unwind" identifier="logoutSegue" unwindAction="unwindToMenuWithSegue:" id="J9j-sB-JfF"/>
+                    </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="75d-ix-ovn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1857" y="1025"/>
+            <point key="canvasLocation" x="1856.8" y="1024.1379310344828"/>
         </scene>
     </scenes>
     <resources>
