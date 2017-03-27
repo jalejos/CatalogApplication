@@ -14,6 +14,8 @@
 		31E8950D1E84998F0038E70A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31E8950B1E84998F0038E70A /* LaunchScreen.storyboard */; };
 		31E895181E84998F0038E70A /* CatalogApplicationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E895171E84998F0038E70A /* CatalogApplicationTests.swift */; };
 		31E895231E84998F0038E70A /* CatalogApplicationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E895221E84998F0038E70A /* CatalogApplicationUITests.swift */; };
+		31F182811E898A27002635CA /* MediaTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F182801E898A27002635CA /* MediaTableViewController.swift */; };
+		31F182831E898BDE002635CA /* MoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F182821E898BDE002635CA /* MoviesViewController.swift */; };
 		31F182851E898C4E002635CA /* MediaTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31F182841E898C4E002635CA /* MediaTableViewCell.xib */; };
 		31F182871E898D87002635CA /* MediaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F182861E898D87002635CA /* MediaTableViewCell.swift */; };
 		7D872E0AD77552922A4D72DC /* Pods_CatalogApplication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 086D1B6E6FCDE95D99E2EF53 /* Pods_CatalogApplication.framework */; };
@@ -55,6 +57,8 @@
 		31E8951E1E84998F0038E70A /* CatalogApplicationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CatalogApplicationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		31E895221E84998F0038E70A /* CatalogApplicationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogApplicationUITests.swift; sourceTree = "<group>"; };
 		31E895241E84998F0038E70A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		31F182801E898A27002635CA /* MediaTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaTableViewController.swift; sourceTree = "<group>"; };
+		31F182821E898BDE002635CA /* MoviesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviesViewController.swift; sourceTree = "<group>"; };
 		31F182841E898C4E002635CA /* MediaTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MediaTableViewCell.xib; path = CatalogApplication/ViewControllers/MediaTableViewCell.xib; sourceTree = SOURCE_ROOT; };
 		31F182861E898D87002635CA /* MediaTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MediaTableViewCell.swift; path = CatalogApplication/ViewControllers/MediaTableViewCell.swift; sourceTree = SOURCE_ROOT; };
 		3A3CBF246F36011EB0611C04 /* Pods-CatalogApplicationTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatalogApplicationTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CatalogApplicationTests/Pods-CatalogApplicationTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -152,6 +156,8 @@
 			isa = PBXGroup;
 			children = (
 				31E895041E84998F0038E70A /* ViewController.swift */,
+				31F182821E898BDE002635CA /* MoviesViewController.swift */,
+				31F182801E898A27002635CA /* MediaTableViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -533,8 +539,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31F182811E898A27002635CA /* MediaTableViewController.swift in Sources */,
 				31E895051E84998F0038E70A /* ViewController.swift in Sources */,
 				31E895031E84998F0038E70A /* AppDelegate.swift in Sources */,
+				31F182831E898BDE002635CA /* MoviesViewController.swift in Sources */,
 				31F182871E898D87002635CA /* MediaTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
