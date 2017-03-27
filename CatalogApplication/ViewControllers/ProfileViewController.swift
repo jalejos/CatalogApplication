@@ -18,7 +18,27 @@ class ProfileViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureView()
         setupLogoutButton()
+    }
+    
+    func configureView() {
+        if let accessToken = AccessToken.current {
+            let req = GraphRequest(graphPath: "me", parameters: ["fields":"email, name"], accessToken: accessToken, httpMethod: .GET, apiVersion: 2.8)
+            req.start({ (connection, result) in
+                switch result {
+                case .success(let graphResponse):
+                    if let responseDictionary = graphResponse.dictionaryValue {
+                        self.nameLabel.text = responseDictionary["name"] as? String
+                        self.emailLabel.text = responseDictionary["email"] as? String
+                    }
+                    break
+                case .failed(let error):
+                    print(error)
+                    break
+                }
+            })
+        }
     }
     
     func setupLogoutButton() {
