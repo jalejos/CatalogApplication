@@ -319,7 +319,7 @@
             </objects>
             <point key="canvasLocation" x="1856.8" y="1024.1379310344828"/>
         </scene>
-        <!--Root View Controller-->
+        <!--Top Categories Table View Controller-->
         <scene sceneID="EGh-uy-FyS">
             <objects>
                 <tableViewController id="8zr-c1-twx" customClass="TopCategoriesTableViewController" customModule="CatalogApplication" customModuleProvider="target" sceneMemberID="viewController">
@@ -332,7 +332,7 @@
                             <outlet property="delegate" destination="8zr-c1-twx" id="cCn-oI-ihp"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="0sb-2C-xH8"/>
+                    <navigationItem key="navigationItem" id="0sb-2C-xH8"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="73i-Cz-uzo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
