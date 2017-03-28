@@ -15,6 +15,17 @@
 		31E895181E84998F0038E70A /* CatalogApplicationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E895171E84998F0038E70A /* CatalogApplicationTests.swift */; };
 		31E895231E84998F0038E70A /* CatalogApplicationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E895221E84998F0038E70A /* CatalogApplicationUITests.swift */; };
 		31E895471E85DB220038E70A /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E895461E85DB220038E70A /* ProfileViewController.swift */; };
+		31F182811E898A27002635CA /* MediaTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F182801E898A27002635CA /* MediaTableViewController.swift */; };
+		31F182831E898BDE002635CA /* MoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F182821E898BDE002635CA /* MoviesViewController.swift */; };
+		31F182851E898C4E002635CA /* MediaTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31F182841E898C4E002635CA /* MediaTableViewCell.xib */; };
+		31F182871E898D87002635CA /* MediaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F182861E898D87002635CA /* MediaTableViewCell.swift */; };
+		31F182891E89B963002635CA /* MoviesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F182881E89B963002635CA /* MoviesService.swift */; };
+		31F1828B1E89B971002635CA /* MoviesDataLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F1828A1E89B971002635CA /* MoviesDataLayer.swift */; };
+		31F1828D1E89B995002635CA /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F1828C1E89B995002635CA /* APIManager.swift */; };
+		31F182911E89BE73002635CA /* MediaRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F182901E89BE73002635CA /* MediaRouter.swift */; };
+		31F182931E89CE13002635CA /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F182921E89CE13002635CA /* Movie.swift */; };
+		31F182951E8AC63F002635CA /* MediaDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F182941E8AC63F002635CA /* MediaDetailsViewController.swift */; };
+		31F182971E8ACFF9002635CA /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F182961E8ACFF9002635CA /* WebViewController.swift */; };
 		7D872E0AD77552922A4D72DC /* Pods_CatalogApplication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 086D1B6E6FCDE95D99E2EF53 /* Pods_CatalogApplication.framework */; };
 		9BE0EEE4F8FD921694B9833E /* Pods_CatalogApplicationUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01290D279A0F3A000442AB9D /* Pods_CatalogApplicationUITests.framework */; };
 		FBE4310267742BDD12A41413 /* Pods_CatalogApplicationTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C4F4FA6BF8A5C2730D02C56 /* Pods_CatalogApplicationTests.framework */; };
@@ -55,6 +66,17 @@
 		31E895221E84998F0038E70A /* CatalogApplicationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogApplicationUITests.swift; sourceTree = "<group>"; };
 		31E895241E84998F0038E70A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		31E895461E85DB220038E70A /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		31F182801E898A27002635CA /* MediaTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaTableViewController.swift; sourceTree = "<group>"; };
+		31F182821E898BDE002635CA /* MoviesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviesViewController.swift; sourceTree = "<group>"; };
+		31F182841E898C4E002635CA /* MediaTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MediaTableViewCell.xib; path = CatalogApplication/ViewControllers/MediaTableViewCell.xib; sourceTree = SOURCE_ROOT; };
+		31F182861E898D87002635CA /* MediaTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MediaTableViewCell.swift; path = CatalogApplication/ViewControllers/MediaTableViewCell.swift; sourceTree = SOURCE_ROOT; };
+		31F182881E89B963002635CA /* MoviesService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MoviesService.swift; path = CatalogApplication/ViewControllers/MoviesService.swift; sourceTree = SOURCE_ROOT; };
+		31F1828A1E89B971002635CA /* MoviesDataLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MoviesDataLayer.swift; path = CatalogApplication/ViewControllers/MoviesDataLayer.swift; sourceTree = SOURCE_ROOT; };
+		31F1828C1E89B995002635CA /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = APIManager.swift; path = CatalogApplication/ViewControllers/APIManager.swift; sourceTree = SOURCE_ROOT; };
+		31F182901E89BE73002635CA /* MediaRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MediaRouter.swift; path = CatalogApplication/ViewControllers/MediaRouter.swift; sourceTree = SOURCE_ROOT; };
+		31F182921E89CE13002635CA /* Movie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Movie.swift; path = CatalogApplication/ViewControllers/Movie.swift; sourceTree = SOURCE_ROOT; };
+		31F182941E8AC63F002635CA /* MediaDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaDetailsViewController.swift; sourceTree = "<group>"; };
+		31F182961E8ACFF9002635CA /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		3A3CBF246F36011EB0611C04 /* Pods-CatalogApplicationTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatalogApplicationTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CatalogApplicationTests/Pods-CatalogApplicationTests.debug.xcconfig"; sourceTree = "<group>"; };
 		3C4F4FA6BF8A5C2730D02C56 /* Pods_CatalogApplicationTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CatalogApplicationTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		477B2E9865F9F93D2BD1A996 /* Pods-CatalogApplicationTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatalogApplicationTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CatalogApplicationTests/Pods-CatalogApplicationTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -151,6 +173,10 @@
 			children = (
 				31E895041E84998F0038E70A /* ViewController.swift */,
 				31E895461E85DB220038E70A /* ProfileViewController.swift */,
+				31F182821E898BDE002635CA /* MoviesViewController.swift */,
+				31F182801E898A27002635CA /* MediaTableViewController.swift */,
+				31F182941E8AC63F002635CA /* MediaDetailsViewController.swift */,
+				31F182961E8ACFF9002635CA /* WebViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -176,6 +202,8 @@
 		31E895341E8583D40038E70A /* ReusableViews */ = {
 			isa = PBXGroup;
 			children = (
+				31F182861E898D87002635CA /* MediaTableViewCell.swift */,
+				31F182841E898C4E002635CA /* MediaTableViewCell.xib */,
 			);
 			path = ReusableViews;
 			sourceTree = "<group>";
@@ -193,6 +221,7 @@
 		31E895361E8584270038E70A /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				31F182881E89B963002635CA /* MoviesService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -200,6 +229,7 @@
 		31E895371E8584390038E70A /* DataLayers */ = {
 			isa = PBXGroup;
 			children = (
+				31F1828A1E89B971002635CA /* MoviesDataLayer.swift */,
 			);
 			path = DataLayers;
 			sourceTree = "<group>";
@@ -207,6 +237,8 @@
 		31E895381E85844A0038E70A /* Routers */ = {
 			isa = PBXGroup;
 			children = (
+				31F1828C1E89B995002635CA /* APIManager.swift */,
+				31F182901E89BE73002635CA /* MediaRouter.swift */,
 			);
 			path = Routers;
 			sourceTree = "<group>";
@@ -221,6 +253,7 @@
 		31E8953A1E8584700038E70A /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				31F182921E89CE13002635CA /* Movie.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -366,6 +399,7 @@
 			files = (
 				31E8950D1E84998F0038E70A /* LaunchScreen.storyboard in Resources */,
 				31E8950A1E84998F0038E70A /* Assets.xcassets in Resources */,
+				31F182851E898C4E002635CA /* MediaTableViewCell.xib in Resources */,
 				31E895081E84998F0038E70A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -530,8 +564,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				31E895471E85DB220038E70A /* ProfileViewController.swift in Sources */,
+				31F1828D1E89B995002635CA /* APIManager.swift in Sources */,
+				31F182811E898A27002635CA /* MediaTableViewController.swift in Sources */,
 				31E895051E84998F0038E70A /* ViewController.swift in Sources */,
+				31F182891E89B963002635CA /* MoviesService.swift in Sources */,
+				31F182931E89CE13002635CA /* Movie.swift in Sources */,
+				31F1828B1E89B971002635CA /* MoviesDataLayer.swift in Sources */,
+				31F182911E89BE73002635CA /* MediaRouter.swift in Sources */,
+				31F182971E8ACFF9002635CA /* WebViewController.swift in Sources */,
 				31E895031E84998F0038E70A /* AppDelegate.swift in Sources */,
+				31F182831E898BDE002635CA /* MoviesViewController.swift in Sources */,
+				31F182951E8AC63F002635CA /* MediaDetailsViewController.swift in Sources */,
+				31F182871E898D87002635CA /* MediaTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
