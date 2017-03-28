@@ -26,6 +26,7 @@
 		31F182931E89CE13002635CA /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F182921E89CE13002635CA /* Movie.swift */; };
 		31F182951E8AC63F002635CA /* MediaDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F182941E8AC63F002635CA /* MediaDetailsViewController.swift */; };
 		31F182971E8ACFF9002635CA /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F182961E8ACFF9002635CA /* WebViewController.swift */; };
+		31F182991E8AE123002635CA /* BooksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F182981E8AE123002635CA /* BooksViewController.swift */; };
 		31F1829B1E8AE166002635CA /* BooksDataLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F1829A1E8AE166002635CA /* BooksDataLayer.swift */; };
 		31F1829D1E8AE180002635CA /* BooksService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F1829C1E8AE180002635CA /* BooksService.swift */; };
 		31F1829F1E8AE2C0002635CA /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F1829E1E8AE2C0002635CA /* Book.swift */; };
@@ -80,6 +81,7 @@
 		31F182921E89CE13002635CA /* Movie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Movie.swift; path = CatalogApplication/ViewControllers/Movie.swift; sourceTree = SOURCE_ROOT; };
 		31F182941E8AC63F002635CA /* MediaDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaDetailsViewController.swift; sourceTree = "<group>"; };
 		31F182961E8ACFF9002635CA /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		31F182981E8AE123002635CA /* BooksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BooksViewController.swift; sourceTree = "<group>"; };
 		31F1829A1E8AE166002635CA /* BooksDataLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BooksDataLayer.swift; path = CatalogApplication/ViewControllers/BooksDataLayer.swift; sourceTree = SOURCE_ROOT; };
 		31F1829C1E8AE180002635CA /* BooksService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BooksService.swift; path = CatalogApplication/ViewControllers/BooksService.swift; sourceTree = SOURCE_ROOT; };
 		31F1829E1E8AE2C0002635CA /* Book.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Book.swift; path = CatalogApplication/ViewControllers/Book.swift; sourceTree = SOURCE_ROOT; };
@@ -180,6 +182,7 @@
 				31E895041E84998F0038E70A /* ViewController.swift */,
 				31E895461E85DB220038E70A /* ProfileViewController.swift */,
 				31F182821E898BDE002635CA /* MoviesViewController.swift */,
+				31F182981E8AE123002635CA /* BooksViewController.swift */,
 				31F182801E898A27002635CA /* MediaTableViewController.swift */,
 				31F182941E8AC63F002635CA /* MediaDetailsViewController.swift */,
 				31F182961E8ACFF9002635CA /* WebViewController.swift */,
@@ -587,6 +590,7 @@
 				31F1829D1E8AE180002635CA /* BooksService.swift in Sources */,
 				31F182871E898D87002635CA /* MediaTableViewCell.swift in Sources */,
 				31F1829B1E8AE166002635CA /* BooksDataLayer.swift in Sources */,
+				31F182991E8AE123002635CA /* BooksViewController.swift in Sources */,
 				31F1829F1E8AE2C0002635CA /* Book.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

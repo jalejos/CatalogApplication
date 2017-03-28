@@ -50,10 +50,10 @@
             </objects>
             <point key="canvasLocation" x="1857" y="-288"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Books View Controller-->
         <scene sceneID="IXl-qY-nu6">
             <objects>
-                <tableViewController id="c6A-Uu-wp2" sceneMemberID="viewController">
+                <tableViewController id="c6A-Uu-wp2" customClass="BooksViewController" customModule="CatalogApplication" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="J4I-AA-sO7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
