@@ -40,7 +40,7 @@
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="cwA-oY-xXh" secondAttribute="bottom" constant="8" id="8Br-Gc-cy4"/>
-                    <constraint firstItem="oqP-Xl-ANU" firstAttribute="top" secondItem="Cbm-P0-E2w" secondAttribute="top" constant="8" id="CTX-UC-pg7"/>
+                    <constraint firstItem="oqP-Xl-ANU" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Cbm-P0-E2w" secondAttribute="top" constant="8" id="CTX-UC-pg7"/>
                     <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="oqP-Xl-ANU" secondAttribute="bottom" constant="7.5" id="Gm2-55-sR6"/>
                     <constraint firstAttribute="trailing" secondItem="ZX0-c8-EM4" secondAttribute="trailing" constant="8" id="Km6-pA-yQo"/>
                     <constraint firstItem="ZX0-c8-EM4" firstAttribute="leading" secondItem="oqP-Xl-ANU" secondAttribute="trailing" constant="7.5" id="be9-yF-phW"/>
@@ -48,6 +48,7 @@
                     <constraint firstItem="cwA-oY-xXh" firstAttribute="top" secondItem="ZX0-c8-EM4" secondAttribute="bottom" constant="8" id="kzc-UQ-yFd"/>
                     <constraint firstAttribute="trailing" secondItem="cwA-oY-xXh" secondAttribute="trailing" constant="8" id="ncH-eX-Tgn"/>
                     <constraint firstItem="ZX0-c8-EM4" firstAttribute="top" secondItem="Cbm-P0-E2w" secondAttribute="top" constant="8" id="q3R-nf-Ti4"/>
+                    <constraint firstItem="oqP-Xl-ANU" firstAttribute="centerY" secondItem="Cbm-P0-E2w" secondAttribute="centerY" id="s7D-iA-YHr"/>
                     <constraint firstItem="cwA-oY-xXh" firstAttribute="leading" secondItem="oqP-Xl-ANU" secondAttribute="trailing" constant="7.5" id="z2t-6N-tI2"/>
                 </constraints>
             </tableViewCellContentView>
