@@ -29,6 +29,8 @@ class MediaDetailsViewController: UIViewController {
         } else if let book = object as? Book {
             configWithBook(book: book)
         }
+        
+        checkHyperlinkButtonStatus()
         // Do any additional setup after loading the view.
     }
     
@@ -65,6 +67,16 @@ class MediaDetailsViewController: UIViewController {
         
         previewImageView.image = UIImage.init(named: "book-icon")
         linkURL = book.articleURL
+    }
+    
+    func checkHyperlinkButtonStatus(){
+        if let url = linkURL {
+            if !url.path.isEmpty {
+                hyperlinkButton.isHidden = false
+                return
+            }
+        }
+        hyperlinkButton.isHidden = true
     }
 }
 
