@@ -13,7 +13,7 @@ struct BooksDataLayer {
     
     static let wrongContentError = NSError.init(domain: "", code: 204, userInfo: nil)
     
-    static func getMovies(from offset: Int, onComplete: @escaping (_ books: [Book]?, _ error: Error?) -> Void) {
+    static func getBooks(from offset: Int, onComplete: @escaping (_ books: [Book]?, _ error: Error?) -> Void) {
         BooksService.getBooks(from: offset) { (booksJSON, error) in
             if booksJSON != nil {
                 guard let arrayJSON = booksJSON!["results"] as? Array<Dictionary<String, Any>> else {
