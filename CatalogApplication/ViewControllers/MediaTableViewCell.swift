@@ -37,7 +37,11 @@ class MediaTableViewCell: UITableViewCell {
     func configureBookCell(book: Book) {
         previewImageView.image = UIImage.init(named: "book-icon")
         titleLabel.text = book.title
-        dateLabel.text = book.title
+        if !book.date.isEmpty {
+            dateLabel.text = book.date
+        } else {
+            dateLabel.text = "Date N/A"
+        }
     }
 
 }
