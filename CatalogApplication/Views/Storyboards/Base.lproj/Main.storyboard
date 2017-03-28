@@ -257,32 +257,13 @@
                     <connections>
                         <segue destination="cnD-Jl-R6Z" kind="relationship" relationship="viewControllers" id="jVe-Eu-kFK"/>
                         <segue destination="RAZ-lg-hqG" kind="relationship" relationship="viewControllers" id="HHE-Aa-wwk"/>
-                        <segue destination="ADx-hr-gQk" kind="relationship" relationship="viewControllers" id="W4u-Xk-VX6"/>
+                        <segue destination="535-Xc-vjH" kind="relationship" relationship="viewControllers" id="3q0-Yi-Hx6"/>
                         <segue destination="1WH-ng-DqM" kind="relationship" relationship="viewControllers" id="BLc-3j-oCz"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iDO-PF-W7g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="948" y="36"/>
-        </scene>
-        <!--Top 20s-->
-        <scene sceneID="Sv8-vg-C6t">
-            <objects>
-                <viewController id="ADx-hr-gQk" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="7b5-0H-MUr"/>
-                        <viewControllerLayoutGuide type="bottom" id="QRV-rn-BGA"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="fta-AV-KMn">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Top 20s" image="star-icon" id="stj-rz-VoI"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="lPC-jF-wLw" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1857" y="369"/>
         </scene>
         <!--Profile-->
         <scene sceneID="jAQ-X8-0aN">
@@ -337,6 +318,42 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="75d-ix-ovn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1856.8" y="1024.1379310344828"/>
+        </scene>
+        <!--Root View Controller-->
+        <scene sceneID="EGh-uy-FyS">
+            <objects>
+                <tableViewController id="8zr-c1-twx" customClass="TopCategoriesTableViewController" customModule="CatalogApplication" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="1Uz-qb-oYX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="dataSource" destination="8zr-c1-twx" id="l0z-FA-F9g"/>
+                            <outlet property="delegate" destination="8zr-c1-twx" id="cCn-oI-ihp"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="0sb-2C-xH8"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="73i-Cz-uzo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2625" y="357"/>
+        </scene>
+        <!--Top 20s-->
+        <scene sceneID="V4N-jS-tIS">
+            <objects>
+                <navigationController id="535-Xc-vjH" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Top 20s" image="star-icon" id="sd0-V6-CRb"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="3lO-q3-qkA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="8zr-c1-twx" kind="relationship" relationship="rootViewController" id="zRC-HW-3DQ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="C9s-LY-4HY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1857" y="357"/>
         </scene>
     </scenes>
     <resources>
