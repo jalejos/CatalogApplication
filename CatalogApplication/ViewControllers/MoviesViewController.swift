@@ -19,7 +19,7 @@ class MoviesViewController: MediaTableViewController {
                 self.movies = movies
                 self.tableView.reloadData()
             } else {
-                print(error)
+                print(error ?? "Error getting movies data")
             }
         }
         // Do any additional setup after loading the view.
