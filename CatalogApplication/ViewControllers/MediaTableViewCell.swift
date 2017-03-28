@@ -32,7 +32,12 @@ class MediaTableViewCell: UITableViewCell {
         }
         titleLabel.text = movie.title
         dateLabel.text = movie.date
-        
+    }
+    
+    func configureBookCell(book: Book) {
+        previewImageView.image = UIImage.init(named: "book-icon")
+        titleLabel.text = book.title
+        dateLabel.text = book.title
     }
 
 }
