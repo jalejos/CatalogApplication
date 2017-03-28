@@ -24,19 +24,19 @@ class MediaDetailsViewController: UIViewController {
         super.viewDidLoad()
         if let movie = object as? Movie {
             titleLabel.text = movie.title
+            directorLabel.text = movie.director
             dateLabel.text = movie.date
+            var rating: String
+            if movie.rating.isEmpty {
+                rating = "N/A"
+            } else {
+                rating = movie.rating
+            }
+            ratingLabel.text = "Rating: \(rating)"
             if let url = movie.imageURL {
                 previewImageView.af_setImage(withURL: url)
             }
         }
         // Do any additional setup after loading the view.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-
-
 }
