@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AlamofireImage
 
 class MediaTableViewCell: UITableViewCell {
 
@@ -25,10 +26,13 @@ class MediaTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func configureCell() {
-        previewImageView.image = UIImage.init(named: "movie-icon")
-        titleLabel.text = "place holder"
-        dateLabel.text = "place holder"
+    func configureMovieCell(movie: Movie) {
+        if let url = movie.imageURL {
+            previewImageView.af_setImage(withURL: url)
+        }
+        titleLabel.text = movie.title
+        dateLabel.text = movie.date
+        
     }
 
 }
