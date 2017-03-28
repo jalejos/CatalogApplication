@@ -25,25 +25,50 @@ class MediaDetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         if let movie = object as? Movie {
-            titleLabel.text = movie.title
-            directorLabel.text = movie.director
-            dateLabel.text = movie.date
-            descriptionTextView.text = movie.summary
-            var rating: String
-            if movie.rating.isEmpty {
-                rating = "N/A"
-            } else {
-                rating = movie.rating
-            }
-            ratingLabel.text = "Rating: \(rating)"
-            if let url = movie.imageURL {
-                previewImageView.af_setImage(withURL: url)
-            }
-            linkURL = movie.articleURL
+            configWithMovie(movie: movie)
+        } else if let book = object as? Book {
+            configWithBook(book: book)
         }
         // Do any additional setup after loading the view.
     }
     
+    func configWithMovie(movie: Movie) {
+        titleLabel.text = movie.title
+        directorLabel.text = movie.director
+        dateLabel.text = movie.date
+        descriptionTextView.text = movie.summary
+        var rating: String
+        if movie.rating.isEmpty {
+            rating = "N/A"
+        } else {
+            rating = movie.rating
+        }
+        ratingLabel.text = "Rating: \(rating)"
+        if let url = movie.imageURL {
+            previewImageView.af_setImage(withURL: url)
+        }
+        linkURL = movie.articleURL
+    }
+    
+    func configWithBook(book: Book) {
+        titleLabel.text = book.title
+        directorLabel.text = book.author
+        dateLabel.text = book.date
+        descriptionTextView.text = book.summary
+        var rating: String
+        if book.rating.isEmpty {
+            rating = "N/A"
+        } else {
+            rating = book.rating
+        }
+        ratingLabel.text = "Rating: \(rating)"
+        
+        previewImageView.image = UIImage.init(named: "book-icon")
+        linkURL = book.articleURL
+    }
+}
+
+extension MediaDetailsViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "WebSegue" {
             let webDisplay = segue.destination as! WebViewController
