@@ -19,6 +19,7 @@ class MediaDetailsViewController: UIViewController {
     @IBOutlet weak var hyperlinkButton: UIButton!
     
     var object: Any?
+    var linkURL: URL?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,7 +37,15 @@ class MediaDetailsViewController: UIViewController {
             if let url = movie.imageURL {
                 previewImageView.af_setImage(withURL: url)
             }
+            linkURL = movie.articleURL
         }
         // Do any additional setup after loading the view.
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "WebSegue" {
+            let webDisplay = segue.destination as! WebViewController
+            webDisplay.url = linkURL
+        }
     }
 }

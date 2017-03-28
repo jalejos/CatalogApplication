@@ -145,7 +145,7 @@
                                 <rect key="frame" x="174" y="155" width="46" height="30"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
-                                    <segue destination="3zG-oY-9Bw" kind="show" id="p1n-mz-jdj"/>
+                                    <segue destination="3zG-oY-9Bw" kind="show" identifier="WebSegue" id="p1n-mz-jdj"/>
                                 </connections>
                             </button>
                         </subviews>
