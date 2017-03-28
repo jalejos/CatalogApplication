@@ -16,6 +16,7 @@ class MediaDetailsViewController: UIViewController {
     @IBOutlet weak var directorLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var ratingLabel: UILabel!
+    @IBOutlet weak var descriptionTextView: UITextView!
     @IBOutlet weak var hyperlinkButton: UIButton!
     
     var object: Any?
@@ -27,6 +28,7 @@ class MediaDetailsViewController: UIViewController {
             titleLabel.text = movie.title
             directorLabel.text = movie.director
             dateLabel.text = movie.date
+            descriptionTextView.text = movie.summary
             var rating: String
             if movie.rating.isEmpty {
                 rating = "N/A"

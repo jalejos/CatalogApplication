@@ -175,6 +175,7 @@
                     </view>
                     <connections>
                         <outlet property="dateLabel" destination="QnP-xk-gm8" id="lPg-Mh-YTB"/>
+                        <outlet property="descriptionTextView" destination="gHx-sO-pxJ" id="4E2-np-BOb"/>
                         <outlet property="directorLabel" destination="zQ2-fd-1Jn" id="RXD-Wd-M5s"/>
                         <outlet property="hyperlinkButton" destination="wNA-2i-dYS" id="qxT-oo-CGV"/>
                         <outlet property="previewImageView" destination="FTO-UX-cuG" id="1U8-O8-sb0"/>
