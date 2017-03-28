@@ -37,7 +37,7 @@ class MediaTableViewCell: UITableViewCell {
     func configureBookCell(book: Book) {
         previewImageView.image = UIImage.init(named: "book-icon")
         titleLabel.text = book.title
-        dateLabel.text = book.title
+        dateLabel.text = book.date
     }
 
 }

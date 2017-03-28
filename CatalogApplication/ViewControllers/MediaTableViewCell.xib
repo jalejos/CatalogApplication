@@ -24,10 +24,11 @@
                         <rect key="frame" x="8" y="8" width="79.5" height="79.5"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="oqP-Xl-ANU" secondAttribute="height" multiplier="1:1" id="b8c-gf-DXT"/>
+                            <constraint firstAttribute="width" constant="80" id="eQA-ZR-scs"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZX0-c8-EM4">
-                        <rect key="frame" x="95" y="8" width="49" height="24"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZX0-c8-EM4">
+                        <rect key="frame" x="95" y="8" width="334" height="24"/>
                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -42,10 +43,13 @@
                 <constraints>
                     <constraint firstItem="cwA-oY-xXh" firstAttribute="top" secondItem="ZX0-c8-EM4" secondAttribute="bottom" constant="8" id="2NI-lx-dz0"/>
                     <constraint firstItem="ZX0-c8-EM4" firstAttribute="leading" secondItem="oqP-Xl-ANU" secondAttribute="trailing" constant="8" id="AVx-yk-vyF"/>
+                    <constraint firstItem="ZX0-c8-EM4" firstAttribute="trailing" secondItem="Cbm-P0-E2w" secondAttribute="trailingMargin" id="DAy-DR-99h"/>
                     <constraint firstItem="oqP-Xl-ANU" firstAttribute="leading" secondItem="Cbm-P0-E2w" secondAttribute="leadingMargin" id="Eb5-Ax-DwJ"/>
                     <constraint firstItem="ZX0-c8-EM4" firstAttribute="top" secondItem="Cbm-P0-E2w" secondAttribute="topMargin" id="Geg-Ob-1xO"/>
-                    <constraint firstItem="oqP-Xl-ANU" firstAttribute="bottom" secondItem="Cbm-P0-E2w" secondAttribute="bottomMargin" id="Qaw-zR-eOm"/>
-                    <constraint firstItem="oqP-Xl-ANU" firstAttribute="top" secondItem="Cbm-P0-E2w" secondAttribute="topMargin" id="dSA-FH-XRg"/>
+                    <constraint firstItem="oqP-Xl-ANU" firstAttribute="bottom" secondItem="Cbm-P0-E2w" secondAttribute="bottomMargin" priority="500" id="Qaw-zR-eOm"/>
+                    <constraint firstItem="oqP-Xl-ANU" firstAttribute="top" secondItem="Cbm-P0-E2w" secondAttribute="topMargin" priority="500" id="dSA-FH-XRg"/>
+                    <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="cwA-oY-xXh" secondAttribute="bottom" constant="26" id="fKZ-ls-cOE"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="cwA-oY-xXh" secondAttribute="bottom" priority="750" constant="8" id="fWv-Wd-VAw"/>
                     <constraint firstItem="cwA-oY-xXh" firstAttribute="leading" secondItem="oqP-Xl-ANU" secondAttribute="trailing" constant="8" id="lVf-ha-Cpf"/>
                 </constraints>
             </tableViewCellContentView>
