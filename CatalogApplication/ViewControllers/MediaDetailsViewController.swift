@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AlamofireImage
 
 class MediaDetailsViewController: UIViewController {
 
@@ -15,12 +16,19 @@ class MediaDetailsViewController: UIViewController {
     @IBOutlet weak var directorLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var ratingLabel: UILabel!
-    @IBOutlet weak var hyperlinkImageView: UIImageView!
     @IBOutlet weak var hyperlinkButton: UIButton!
+    
+    var object: Any?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        if let movie = object as? Movie {
+            titleLabel.text = movie.title
+            dateLabel.text = movie.date
+            if let url = movie.imageURL {
+                previewImageView.af_setImage(withURL: url)
+            }
+        }
         // Do any additional setup after loading the view.
     }
 
