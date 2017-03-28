@@ -188,9 +188,11 @@
                             <constraint firstItem="zQ2-fd-1Jn" firstAttribute="trailing" secondItem="7Vc-Tn-qYD" secondAttribute="trailingMargin" id="W37-ly-xxx"/>
                             <constraint firstItem="zQ2-fd-1Jn" firstAttribute="top" secondItem="an3-d7-oTJ" secondAttribute="bottom" constant="8" id="Ye5-dn-xAE"/>
                             <constraint firstItem="an3-d7-oTJ" firstAttribute="top" secondItem="uTA-Lw-6H5" secondAttribute="bottom" constant="8" id="ZW9-lt-vs4"/>
-                            <constraint firstItem="gHx-sO-pxJ" firstAttribute="top" secondItem="FTO-UX-cuG" secondAttribute="bottom" constant="8" id="aXZ-xb-7cR"/>
+                            <constraint firstItem="gHx-sO-pxJ" firstAttribute="top" relation="greaterThanOrEqual" secondItem="FTO-UX-cuG" secondAttribute="bottom" constant="8" id="aXZ-xb-7cR"/>
+                            <constraint firstItem="gHx-sO-pxJ" firstAttribute="top" relation="greaterThanOrEqual" secondItem="wNA-2i-dYS" secondAttribute="bottom" constant="8" id="b3F-Ra-qBv"/>
                             <constraint firstItem="gHx-sO-pxJ" firstAttribute="trailing" secondItem="7Vc-Tn-qYD" secondAttribute="trailingMargin" id="kiO-bB-ecH"/>
                             <constraint firstItem="gHx-sO-pxJ" firstAttribute="leading" secondItem="7Vc-Tn-qYD" secondAttribute="leadingMargin" id="v2y-tv-5vd"/>
+                            <constraint firstItem="gHx-sO-pxJ" firstAttribute="top" secondItem="FTO-UX-cuG" secondAttribute="bottom" priority="250" constant="8" id="vMY-x4-MUq"/>
                             <constraint firstItem="an3-d7-oTJ" firstAttribute="leading" secondItem="FTO-UX-cuG" secondAttribute="trailing" constant="8" id="vza-nx-Y4D"/>
                             <constraint firstItem="wNA-2i-dYS" firstAttribute="top" secondItem="dLh-VI-dD0" secondAttribute="bottom" constant="8" id="yG9-Yj-p16"/>
                         </constraints>
