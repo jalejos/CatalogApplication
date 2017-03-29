@@ -91,8 +91,10 @@ class MediaDetailsViewController: UIViewController {
     }
     
     func imageTapped(tapGestureRecognizer: UITapGestureRecognizer) {
-        if let viewController = DTPhotoViewerController(referencedView: previewImageView, image: previewImageView.image) {
-            self.navigationController?.present(viewController, animated: true)
+        if previewImageView.image != UIImage.init(named: "book-icon") {
+            if let viewController = DTPhotoViewerController(referencedView: previewImageView, image: previewImageView.image) {
+                self.navigationController?.present(viewController, animated: true)
+            }
         }
     }
     
