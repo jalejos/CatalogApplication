@@ -8,39 +8,38 @@
 
 import UIKit
 
-class CategoryTableViewController: UITableViewController {
-
+class CategoryTableViewController: MediaTableViewController {
+    
+    var tableObjects: [ListObject]?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
 
     func configureWith(category: Categories) {
-        
-    }
-    
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-    // MARK: - Table view data source
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        TopCategoriesDataLayer.getTop(category: category) { (objects, error) in
+            if objects != nil {
+                self.tableObjects = objects
+                self.tableView.reloadData()
+            } else {
+                print(error ?? "Error in category request")
+            }
+        }
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        if let tableObjects = tableObjects {
+            return tableObjects.count
+        } else {
+            return 0
+        }
     }
-
-
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MediaCell", for: indexPath) as! MediaTableViewCell
+        if let tableObjects = tableObjects {
+            cell.configureGenericCell(object: tableObjects[indexPath.row])
+        }
+        return cell
+    }
 }

@@ -43,5 +43,13 @@ class MediaTableViewCell: UITableViewCell {
             dateLabel.text = "Date N/A"
         }
     }
+    
+    func configureGenericCell(object: ListObject) {
+        if let url = object.imageURL {
+            previewImageView.af_setImage(withURL: url)
+        }
+        titleLabel.text = object.title
+        dateLabel.text = object.date
+    }
 
 }
