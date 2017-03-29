@@ -13,6 +13,7 @@ target 'CatalogApplication' do
   pod 'FacebookCore', '0.2.0'
   pod 'FacebookLogin', '0.2.0'
   pod 'FacebookShare', '0.2.0'
+  pod 'DTPhotoViewerController', '1.0.6'
 
   target 'CatalogApplicationTests' do
     inherit! :search_paths

@@ -8,6 +8,7 @@ PODS:
   - Bolts/AppLinks (1.8.4):
     - Bolts/Tasks
   - Bolts/Tasks (1.8.4)
+  - DTPhotoViewerController (1.0.6)
   - FacebookCore (0.2.0):
     - Bolts (~> 1.8)
     - FBSDKCoreKit (~> 4.15)
@@ -37,6 +38,7 @@ PODS:
 DEPENDENCIES:
   - Alamofire (~> 4.4)
   - AlamofireImage (~> 3.1)
+  - DTPhotoViewerController (= 1.0.6)
   - FacebookCore (= 0.2.0)
   - FacebookLogin (= 0.2.0)
   - FacebookShare (= 0.2.0)
@@ -47,6 +49,7 @@ SPEC CHECKSUMS:
   Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
   AlamofireImage: 157ed682cc81d3b9db4fb90c1f12180ac552d93b
   Bolts: 8a7995239dbe724f9cba2248b766d48b7ebdd322
+  DTPhotoViewerController: a152edf67d0c67f93515201aab2ba68620c45660
   FacebookCore: 2cb3f0fbff218e9d3119cec84bae983b232412de
   FacebookLogin: c9d606504735780a9e3002465a615512e0a691a5
   FacebookShare: 8e9ee8ea06505e6a1d3d719b0cc63e840fb8aaeb
@@ -57,6 +60,6 @@ SPEC CHECKSUMS:
   Realm: 5a280a1f5a9a3c267bebf4f41ee47911137703d7
   RealmSwift: 0c02b9f2d4be4301c497ed10e53a0580584eb1dd
 
-PODFILE CHECKSUM: c3cb019ff499cc3aea2baf00bfbc84034f4b9f00
+PODFILE CHECKSUM: 72af053b292178d5b9b066ebcf7e1c19e475a9a7
 
 COCOAPODS: 1.1.1
