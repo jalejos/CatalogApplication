@@ -80,27 +80,27 @@
 		31E895461E85DB220038E70A /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		31F182801E898A27002635CA /* MediaTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaTableViewController.swift; sourceTree = "<group>"; };
 		31F182821E898BDE002635CA /* MoviesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviesViewController.swift; sourceTree = "<group>"; };
-		31F182841E898C4E002635CA /* MediaTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MediaTableViewCell.xib; path = CatalogApplication/ViewControllers/MediaTableViewCell.xib; sourceTree = SOURCE_ROOT; };
-		31F182861E898D87002635CA /* MediaTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MediaTableViewCell.swift; path = CatalogApplication/ViewControllers/MediaTableViewCell.swift; sourceTree = SOURCE_ROOT; };
-		31F182881E89B963002635CA /* MoviesService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MoviesService.swift; path = CatalogApplication/ViewControllers/MoviesService.swift; sourceTree = SOURCE_ROOT; };
-		31F1828A1E89B971002635CA /* MoviesDataLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MoviesDataLayer.swift; path = CatalogApplication/ViewControllers/MoviesDataLayer.swift; sourceTree = SOURCE_ROOT; };
-		31F1828C1E89B995002635CA /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = APIManager.swift; path = CatalogApplication/ViewControllers/APIManager.swift; sourceTree = SOURCE_ROOT; };
-		31F182901E89BE73002635CA /* MediaRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MediaRouter.swift; path = CatalogApplication/ViewControllers/MediaRouter.swift; sourceTree = SOURCE_ROOT; };
-		31F182921E89CE13002635CA /* Movie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Movie.swift; path = CatalogApplication/ViewControllers/Movie.swift; sourceTree = SOURCE_ROOT; };
+		31F182841E898C4E002635CA /* MediaTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MediaTableViewCell.xib; path = MediaTableViewCell.xib; sourceTree = "<group>"; };
+		31F182861E898D87002635CA /* MediaTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MediaTableViewCell.swift; path = MediaTableViewCell.swift; sourceTree = "<group>"; };
+		31F182881E89B963002635CA /* MoviesService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MoviesService.swift; path = MoviesService.swift; sourceTree = "<group>"; };
+		31F1828A1E89B971002635CA /* MoviesDataLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MoviesDataLayer.swift; path = MoviesDataLayer.swift; sourceTree = "<group>"; };
+		31F1828C1E89B995002635CA /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = APIManager.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		31F182901E89BE73002635CA /* MediaRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MediaRouter.swift; path = MediaRouter.swift; sourceTree = "<group>"; };
+		31F182921E89CE13002635CA /* Movie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Movie.swift; path = Movie.swift; sourceTree = "<group>"; };
 		31F182941E8AC63F002635CA /* MediaDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaDetailsViewController.swift; sourceTree = "<group>"; };
 		31F182961E8ACFF9002635CA /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		31F182981E8AE123002635CA /* BooksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BooksViewController.swift; sourceTree = "<group>"; };
-		31F1829A1E8AE166002635CA /* BooksDataLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BooksDataLayer.swift; path = CatalogApplication/ViewControllers/BooksDataLayer.swift; sourceTree = SOURCE_ROOT; };
-		31F1829C1E8AE180002635CA /* BooksService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BooksService.swift; path = CatalogApplication/ViewControllers/BooksService.swift; sourceTree = SOURCE_ROOT; };
-		31F1829E1E8AE2C0002635CA /* Book.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Book.swift; path = CatalogApplication/ViewControllers/Book.swift; sourceTree = SOURCE_ROOT; };
+		31F1829A1E8AE166002635CA /* BooksDataLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BooksDataLayer.swift; path = BooksDataLayer.swift; sourceTree = "<group>"; };
+		31F1829C1E8AE180002635CA /* BooksService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BooksService.swift; path = BooksService.swift; sourceTree = "<group>"; };
+		31F1829E1E8AE2C0002635CA /* Book.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Book.swift; path = Book.swift; sourceTree = "<group>"; };
 		31F182A01E8B1C43002635CA /* TopCategoriesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopCategoriesTableViewController.swift; sourceTree = "<group>"; };
-		31F182A21E8B1CA9002635CA /* Categories.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Categories.swift; path = CatalogApplication/ViewControllers/Categories.swift; sourceTree = SOURCE_ROOT; };
-		31F182A41E8B1F4D002635CA /* CategoryTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CategoryTableViewCell.xib; path = CatalogApplication/ViewControllers/CategoryTableViewCell.xib; sourceTree = SOURCE_ROOT; };
-		31F182A61E8B1FDC002635CA /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CategoryTableViewCell.swift; path = CatalogApplication/ViewControllers/CategoryTableViewCell.swift; sourceTree = SOURCE_ROOT; };
+		31F182A21E8B1CA9002635CA /* Categories.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Categories.swift; path = Categories.swift; sourceTree = "<group>"; };
+		31F182A41E8B1F4D002635CA /* CategoryTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CategoryTableViewCell.xib; path = CategoryTableViewCell.xib; sourceTree = "<group>"; };
+		31F182A61E8B1FDC002635CA /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CategoryTableViewCell.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
 		31F182A81E8B3184002635CA /* CategoryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryTableViewController.swift; sourceTree = "<group>"; };
-		31F182AC1E8C2622002635CA /* ListObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ListObject.swift; path = CatalogApplication/ViewControllers/ListObject.swift; sourceTree = SOURCE_ROOT; };
-		31F182AE1E8C2940002635CA /* TopCategoriesService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TopCategoriesService.swift; path = CatalogApplication/ViewControllers/TopCategoriesService.swift; sourceTree = SOURCE_ROOT; };
-		31F182B01E8C2BF3002635CA /* TopCategoriesDataLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TopCategoriesDataLayer.swift; path = CatalogApplication/ViewControllers/TopCategoriesDataLayer.swift; sourceTree = SOURCE_ROOT; };
+		31F182AC1E8C2622002635CA /* ListObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ListObject.swift; path = ListObject.swift; sourceTree = "<group>"; };
+		31F182AE1E8C2940002635CA /* TopCategoriesService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TopCategoriesService.swift; path = TopCategoriesService.swift; sourceTree = "<group>"; };
+		31F182B01E8C2BF3002635CA /* TopCategoriesDataLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TopCategoriesDataLayer.swift; path = TopCategoriesDataLayer.swift; sourceTree = "<group>"; };
 		3A3CBF246F36011EB0611C04 /* Pods-CatalogApplicationTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatalogApplicationTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CatalogApplicationTests/Pods-CatalogApplicationTests.debug.xcconfig"; sourceTree = "<group>"; };
 		3C4F4FA6BF8A5C2730D02C56 /* Pods_CatalogApplicationTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CatalogApplicationTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		477B2E9865F9F93D2BD1A996 /* Pods-CatalogApplicationTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatalogApplicationTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CatalogApplicationTests/Pods-CatalogApplicationTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -195,15 +195,15 @@
 		31E895311E8583970038E70A /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				31E895041E84998F0038E70A /* ViewController.swift */,
-				31E895461E85DB220038E70A /* ProfileViewController.swift */,
-				31F182821E898BDE002635CA /* MoviesViewController.swift */,
 				31F182981E8AE123002635CA /* BooksViewController.swift */,
 				31F182A81E8B3184002635CA /* CategoryTableViewController.swift */,
-				31F182801E898A27002635CA /* MediaTableViewController.swift */,
 				31F182941E8AC63F002635CA /* MediaDetailsViewController.swift */,
-				31F182961E8ACFF9002635CA /* WebViewController.swift */,
+				31F182801E898A27002635CA /* MediaTableViewController.swift */,
+				31F182821E898BDE002635CA /* MoviesViewController.swift */,
+				31E895461E85DB220038E70A /* ProfileViewController.swift */,
 				31F182A01E8B1C43002635CA /* TopCategoriesTableViewController.swift */,
+				31E895041E84998F0038E70A /* ViewController.swift */,
+				31F182961E8ACFF9002635CA /* WebViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -229,10 +229,10 @@
 		31E895341E8583D40038E70A /* ReusableViews */ = {
 			isa = PBXGroup;
 			children = (
-				31F182861E898D87002635CA /* MediaTableViewCell.swift */,
-				31F182841E898C4E002635CA /* MediaTableViewCell.xib */,
 				31F182A61E8B1FDC002635CA /* CategoryTableViewCell.swift */,
 				31F182A41E8B1F4D002635CA /* CategoryTableViewCell.xib */,
+				31F182861E898D87002635CA /* MediaTableViewCell.swift */,
+				31F182841E898C4E002635CA /* MediaTableViewCell.xib */,
 			);
 			path = ReusableViews;
 			sourceTree = "<group>";
@@ -286,10 +286,10 @@
 		31E8953A1E8584700038E70A /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				31F182921E89CE13002635CA /* Movie.swift */,
 				31F1829E1E8AE2C0002635CA /* Book.swift */,
-				31F182AC1E8C2622002635CA /* ListObject.swift */,
 				31F182A21E8B1CA9002635CA /* Categories.swift */,
+				31F182AC1E8C2622002635CA /* ListObject.swift */,
+				31F182921E89CE13002635CA /* Movie.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
