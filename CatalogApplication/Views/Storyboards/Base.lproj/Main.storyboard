@@ -354,6 +354,9 @@
                             <outlet property="delegate" destination="eNg-Ny-fUN" id="SU5-5u-HQr"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <segue destination="ezq-09-eyZ" kind="show" identifier="CategorySegue" id="PAG-Aj-Awj"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="40B-Uo-yGb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -384,6 +387,6 @@
         <image name="star-icon" width="29" height="29"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="oKU-6d-GWg"/>
+        <segue reference="PAG-Aj-Awj"/>
     </inferredMetricsTieBreakers>
 </document>

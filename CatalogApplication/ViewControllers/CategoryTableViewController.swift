@@ -11,6 +11,7 @@ import UIKit
 class CategoryTableViewController: MediaTableViewController {
     
     var tableObjects: [ListObject]?
+    var object: ListObject?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +27,9 @@ class CategoryTableViewController: MediaTableViewController {
             }
         }
     }
+}
 
+extension CategoryTableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if let tableObjects = tableObjects {
             return tableObjects.count
@@ -41,5 +44,21 @@ class CategoryTableViewController: MediaTableViewController {
             cell.configureGenericCell(object: tableObjects[indexPath.row])
         }
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let tableObjects = tableObjects {
+            object = tableObjects[indexPath.row]
+            self.performSegue(withIdentifier: "CategorySegue", sender: self)
+        }
+    }
+}
+
+extension CategoryTableViewController {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "CategorySegue" {
+            let detailsView = segue.destination as! MediaDetailsViewController
+            detailsView.object = object
+        }
     }
 }

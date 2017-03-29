@@ -28,6 +28,8 @@ class MediaDetailsViewController: UIViewController {
             configWithMovie(movie: movie)
         } else if let book = object as? Book {
             configWithBook(book: book)
+        } else if let object = object as? ListObject {
+            configWithGeneric(object: object)
         }
         
         checkHyperlinkButtonStatus()
@@ -67,6 +69,18 @@ class MediaDetailsViewController: UIViewController {
         
         previewImageView.image = UIImage.init(named: "book-icon")
         linkURL = book.articleURL
+    }
+    
+    func configWithGeneric(object: ListObject) {
+        titleLabel.text = object.title
+        directorLabel.text = object.author
+        dateLabel.text = object.date
+        descriptionTextView.text = object.summary
+        ratingLabel.text = ""
+        if let url = object.imageURL {
+            previewImageView.af_setImage(withURL: url)
+        }
+        linkURL = object.articleURL
     }
     
     func checkHyperlinkButtonStatus(){
