@@ -8,6 +8,7 @@
 
 import UIKit
 import AlamofireImage
+import DTPhotoViewerController
 
 class MediaDetailsViewController: UIViewController {
 
@@ -31,7 +32,7 @@ class MediaDetailsViewController: UIViewController {
         } else if let object = object as? ListObject {
             configWithGeneric(object: object)
         }
-        
+        configPreviewImageView()
         checkHyperlinkButtonStatus()
         // Do any additional setup after loading the view.
     }
@@ -81,6 +82,18 @@ class MediaDetailsViewController: UIViewController {
             previewImageView.af_setImage(withURL: url)
         }
         linkURL = object.articleURL
+    }
+    
+    func configPreviewImageView() {
+        let gestureRecognizer = UITapGestureRecognizer.init(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
+        previewImageView.isUserInteractionEnabled = true
+        previewImageView.addGestureRecognizer(gestureRecognizer)
+    }
+    
+    func imageTapped(tapGestureRecognizer: UITapGestureRecognizer) {
+        if let viewController = DTPhotoViewerController(referencedView: previewImageView, image: previewImageView.image) {
+            self.navigationController?.present(viewController, animated: true)
+        }
     }
     
     func checkHyperlinkButtonStatus(){
