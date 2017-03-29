@@ -11,10 +11,11 @@ import Alamofire
 enum MediaRouter: URLRequestConvertible {
     case getMovies(offset: Int)
     case getBooks(offset: Int)
+    case getTop(category: Categories)
     
     var url: URL {
         switch self {
-        case .getMovies, .getBooks:
+        case .getMovies, .getBooks, .getTop:
             return APIManager.baseURL
         }
     }
@@ -25,22 +26,29 @@ enum MediaRouter: URLRequestConvertible {
             return "/movies/v2/reviews/dvd-picks.json"
         case .getBooks:
             return "/books/v3/lists/best-sellers/history.json"
+        case let .getTop(category):
+            return "/mostpopular/v2/mostviewed/\(category.rawValue)/30.json"
         }
     }
     
     var method: HTTPMethod {
         switch self {
-        case .getMovies, .getBooks:
+        case .getMovies, .getBooks, .getTop:
             return .get
         }
     }
     
     var params: Parameters {
+        let parameters: (_ offset: Int) -> (Parameters) = { (offset) in
+            let params: Parameters = ["api-key": APIManager.apiKey,
+                          "offset": offset]
+            return params
+        }
         switch self {
         case let .getMovies(offset), let .getBooks(offset):
-            let parameters: Parameters = ["api-key": APIManager.apiKey,
-                                          "offset": offset]
-            return parameters
+            return parameters(offset)
+        case .getTop:
+            return parameters(0)
         }
     }
     
@@ -49,7 +57,7 @@ enum MediaRouter: URLRequestConvertible {
         urlRequest.httpMethod = method.rawValue
         
         switch self {
-        case .getMovies, .getBooks:
+        case .getMovies, .getBooks, .getTop:
             urlRequest = try URLEncoding.default.encode(urlRequest, with: params)
         }
         
