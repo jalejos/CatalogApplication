@@ -333,10 +333,31 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="0sb-2C-xH8"/>
+                    <connections>
+                        <segue destination="eNg-Ny-fUN" kind="show" identifier="CategorySegue" id="WxZ-c3-kDl"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="73i-Cz-uzo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2625" y="357"/>
+        </scene>
+        <!--Category Table View Controller-->
+        <scene sceneID="y4n-Wm-ryy">
+            <objects>
+                <tableViewController id="eNg-Ny-fUN" customClass="CategoryTableViewController" customModule="CatalogApplication" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="61A-vb-Lml">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="dataSource" destination="eNg-Ny-fUN" id="Ick-UA-OI5"/>
+                            <outlet property="delegate" destination="eNg-Ny-fUN" id="SU5-5u-HQr"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="40B-Uo-yGb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3510" y="357"/>
         </scene>
         <!--Top 20s-->
         <scene sceneID="V4N-jS-tIS">

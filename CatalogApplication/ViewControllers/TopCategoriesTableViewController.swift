@@ -9,6 +9,8 @@
 import UIKit
 
 class TopCategoriesTableViewController: UITableViewController {
+    
+    var category: Categories?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,5 +31,21 @@ class TopCategoriesTableViewController: UITableViewController {
         cell.configWithCategory(category: Categories.array[indexPath.row].rawValue)
         return cell
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        category = Categories.array[indexPath.row]
+        self.performSegue(withIdentifier: "CategorySegue", sender: self)
+    }
 
+}
+
+extension TopCategoriesTableViewController {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "CategorySegue" {
+            let categoryView = segue.destination as! CategoryTableViewController
+            if let category = category {
+                categoryView.configureWith(category: category) 
+            }
+        }
+    }
 }
