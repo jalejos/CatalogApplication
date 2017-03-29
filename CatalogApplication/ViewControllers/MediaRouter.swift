@@ -40,8 +40,8 @@ enum MediaRouter: URLRequestConvertible {
     
     var params: Parameters {
         let parameters: (_ offset: Int) -> (Parameters) = { (offset) in
-            let params = ["appid": APIManager.apiKey,
-                          "offset": offset] as [String : Any]
+            let params: Parameters = ["api-key": APIManager.apiKey,
+                          "offset": offset]
             return params
         }
         switch self {
