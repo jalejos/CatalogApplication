@@ -41,7 +41,7 @@ extension CategoryTableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MediaCell", for: indexPath) as! MediaTableViewCell
         if let tableObjects = tableObjects {
-            cell.configureGenericCell(object: tableObjects[indexPath.row])
+            cell.configureCell(tableObjects[indexPath.row])
         }
         return cell
     }

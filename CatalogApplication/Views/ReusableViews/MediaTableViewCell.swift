@@ -15,41 +15,17 @@ class MediaTableViewCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-    
-    func configureMovieCell(movie: Movie) {
-        if let url = movie.imageURL {
-            previewImageView.af_setImage(withURL: url)
-        }
-        titleLabel.text = movie.title
-        dateLabel.text = movie.date
-    }
-    
-    func configureBookCell(book: Book) {
-        previewImageView.image = UIImage.init(named: "book-icon")
-        titleLabel.text = book.title
-        if !book.date.isEmpty {
-            dateLabel.text = book.date
-        } else {
-            dateLabel.text = "Date N/A"
+    func configureCell(_ object: Any) {
+        if let object = object as? ListObject {
+            titleLabel.text = object.title
+            dateLabel.text = object.date
+            if let _ = object as? Book {
+                previewImageView.image = UIImage.init(named: "book-icon")
+            } else {
+                if let url = object.imageURL {
+                    previewImageView.af_setImage(withURL: url)
+                }
+            }
         }
     }
-    
-    func configureGenericCell(object: ListObject) {
-        if let url = object.imageURL {
-            previewImageView.af_setImage(withURL: url)
-        }
-        titleLabel.text = object.title
-        dateLabel.text = object.date
-    }
-
 }

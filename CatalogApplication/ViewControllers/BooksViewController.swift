@@ -40,7 +40,7 @@ extension BooksViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MediaCell", for: indexPath) as! MediaTableViewCell
         if let books = books {
-            cell.configureBookCell(book: books[indexPath.row])
+            cell.configureCell(books[indexPath.row])
         }
         return cell
     }
