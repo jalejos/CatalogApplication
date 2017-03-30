@@ -16,10 +16,17 @@ class BooksViewController: MediaTableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        BooksDataLayer.getBooks(from: 0) { (books, error) in
+        getBooks(offset: 0)
+    }
+    
+    func getBooks(offset: Int) {
+        BooksDataLayer.getBooks(from: offset) { (books, error) in
             if let books = books {
-                self.books = books
+                if let _ = self.books {
+                    self.books?.append(contentsOf: books)
+                } else {
+                    self.books = books
+                }
                 self.tableView.reloadData()
             } else {
                 print(error ?? "Error getting movies data")
@@ -32,24 +39,34 @@ class BooksViewController: MediaTableViewController {
 extension BooksViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if let books = books {
-            return books.count
+            return books.count + 1
         } else {
             return 0
         }
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! MediaTableViewCell
         if let books = books {
-            cell.configureCell(books[indexPath.row])
+            if indexPath.row < books.count {
+                let bookCell = tableView.dequeueReusableCell(withIdentifier: mediaCellId, for: indexPath) as! MediaTableViewCell
+                bookCell.configureCell(books[indexPath.row])
+                return bookCell
+            } else {
+                let loadCell = tableView.dequeueReusableCell(withIdentifier: loadCellId, for: indexPath)
+                return loadCell
+            }
         }
-        return cell
+        return UITableViewCell()
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let books = books {
-            book = books[indexPath.row]
-            self.performSegue(withIdentifier: selectionSegue, sender: self)
+            if indexPath.row < books.count {
+                book = books[indexPath.row]
+                self.performSegue(withIdentifier: selectionSegue, sender: self)
+            } else {
+                getBooks(offset: books.count)
+            }
         }
     }
 }
