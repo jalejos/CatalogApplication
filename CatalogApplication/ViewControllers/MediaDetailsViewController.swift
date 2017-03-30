@@ -29,7 +29,7 @@ class MediaDetailsViewController: UIViewController {
             configWithMovie(movie: movie)
         } else if let book = object as? Book {
             configWithBook(book: book)
-        } else if let object = object as? ListObject {
+        } else if let object = object as? TopObject {
             configWithGeneric(object: object)
         }
         configPreviewImageView()
@@ -39,7 +39,7 @@ class MediaDetailsViewController: UIViewController {
     
     func configWithMovie(movie: Movie) {
         titleLabel.text = movie.title
-        directorLabel.text = movie.director
+        directorLabel.text = movie.author
         dateLabel.text = movie.date
         descriptionTextView.text = movie.summary
         var rating: String

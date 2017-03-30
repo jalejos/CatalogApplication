@@ -10,8 +10,8 @@ import UIKit
 
 class CategoryTableViewController: MediaTableViewController {
     
-    var tableObjects: [ListObject]?
-    var object: ListObject?
+    var tableObjects: [TopObject]?
+    var object: TopObject?
     
     override func viewDidLoad() {
         super.viewDidLoad()
