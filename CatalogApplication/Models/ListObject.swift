@@ -8,28 +8,16 @@
 
 import Foundation
 import ObjectMapper
+import RealmSwift
 
-class ListObject: Mappable {
-    var title: String = ""
-    var date: String = ""
-    var author: String = ""
-    var summary: String = ""
-    var articleURL: URL?
-    var imageURL: URL?
-    
-    let transformURL = TransformOf<URL, String>(fromJSON: { (value: String?) -> URL? in
-        // transform value from String to URL
-        if let value = value {
-            return URL.init(string:value)
-        }
-        return nil
-    }, toJSON: { (value: URL?) -> String? in
-        // transform value from URL to String
-        if let value = value {
-            return value.path
-        }
-        return nil
-    })
+class ListObject: Object, Mappable {
+    dynamic var id: String = ""
+    dynamic var title: String = ""
+    dynamic var date: String = ""
+    dynamic var author: String = ""
+    dynamic var summary: String = ""
+    dynamic var articleString: String = ""
+    dynamic var imageString: String = ""
     
     let transformDateFormat = TransformOf<String, String>(fromJSON: { (value: String?) -> String? in
         // transform value from api format to app format
@@ -56,6 +44,14 @@ class ListObject: Mappable {
         }
         return nil
     })
+    
+    override static func indexedProperties() -> [String] {
+        return ["title"]
+    }
+    
+    override static func primaryKey() -> String {
+        return "id"
+    }
     
     convenience required init?(map: Map) {
         self.init()

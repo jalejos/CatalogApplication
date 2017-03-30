@@ -24,7 +24,7 @@ class MediaTableViewCell: UITableViewCell {
             if let _ = object as? Book {
                 previewImageView.image = UIImage.init(named: defaultBookImageName)
             } else {
-                if let url = object.imageURL {
+                if let url = URL.init(string: object.imageString){
                     previewImageView.af_setImage(withURL: url)
                 }
             }

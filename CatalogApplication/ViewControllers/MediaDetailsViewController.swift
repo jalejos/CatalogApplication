@@ -47,8 +47,11 @@ class MediaDetailsViewController: UIViewController {
         directorLabel.text = object.author
         dateLabel.text = object.date
         descriptionTextView.text = object.summary
-        linkURL = object.articleURL
-        if let url = object.imageURL {
+        if let url = URL.init(string: object.articleString) {
+            linkURL = url
+        }
+
+        if let url = URL.init(string: object.imageString){
             previewImageView.af_setImage(withURL: url)
         }
     }

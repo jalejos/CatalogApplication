@@ -8,9 +8,16 @@
 
 import Foundation
 import ObjectMapper
+import RealmSwift
 
 class TopCategoriesDataLayer: DataLayer{
     static func getTop(category: Categories, onComplete: @escaping (_ objects: [TopObject]?, _ error: Error?) -> Void) {
+        let realm = try! Realm()
+        let objects = realm.objects(TopObject.self)
+        if objects.count > 0 {
+            let objectsArray = Array(objects)
+            onComplete(objectsArray, nil)
+        }
         TopCategoriesService.getTop(category: category) { (categoriesJSON, error) in
             if categoriesJSON != nil {
                 guard let arrayJSON = categoriesJSON![jsonKey] as? Array<Dictionary<String, Any>> else {
@@ -18,6 +25,13 @@ class TopCategoriesDataLayer: DataLayer{
                     return
                 }
                 let objects = Mapper<TopObject>().mapArray(JSONArray: arrayJSON)
+                if let objects = objects {
+                    for object in objects {
+                        try! realm.write() {
+                            realm.add(object, update:true)
+                        }
+                    }
+                }
                 onComplete(objects, nil)
             } else {
                 onComplete(nil, error)
