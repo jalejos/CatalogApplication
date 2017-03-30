@@ -10,17 +10,12 @@ import Foundation
 
 enum Categories: String {
     /*
-     * Enum doesn't support case counting, which is necesarry for the application. If you need to add further cases, add them in the count variable.
+     * Enum doesn't support case arrays, which is necesarry for the application. If you need to add further cases, add them in the array variable.
      */
     case Food = "Food"
     case Cars = "Automobiles"
     case Arts = "Arts"
     case Movies = "Movies"
-    
-    static var count: Int {
-        let casesArray = [Categories.Food, Categories.Cars, Categories.Arts, Categories.Movies]
-        return casesArray.count
-    }
     
     static var array: Array<Categories> {
         return [Categories.Food, Categories.Cars, Categories.Arts, Categories.Movies]
