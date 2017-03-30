@@ -27,7 +27,6 @@ class MediaDetailsViewController: UIViewController {
         super.viewDidLoad()
         if let object = object as? ListObject{
             configWith(object: object)
-            
             if let movie = object as? Movie {
                 configWithMovie(movie: movie)
             } else if let book = object as? Book {
@@ -36,8 +35,8 @@ class MediaDetailsViewController: UIViewController {
                 configWithTop(object: object)
             }
         }
-        configPreviewImageView()
         checkHyperlinkButtonStatus()
+        configPreviewImageView()
         // Do any additional setup after loading the view.
     }
     
@@ -77,7 +76,22 @@ class MediaDetailsViewController: UIViewController {
     func configWithTop(object: ListObject) {
         ratingLabel.text = ""
     }
-    
+}
+
+extension MediaDetailsViewController {
+    func checkHyperlinkButtonStatus(){
+        if let url = linkURL {
+            if !url.path.isEmpty {
+                hyperlinkButton.isHidden = false
+                return
+            }
+        }
+        hyperlinkButton.isHidden = true
+    }
+}
+
+
+extension MediaDetailsViewController {
     func configPreviewImageView() {
         let gestureRecognizer = UITapGestureRecognizer.init(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
         previewImageView.isUserInteractionEnabled = true
@@ -90,16 +104,6 @@ class MediaDetailsViewController: UIViewController {
                 self.navigationController?.present(viewController, animated: true)
             }
         }
-    }
-    
-    func checkHyperlinkButtonStatus(){
-        if let url = linkURL {
-            if !url.path.isEmpty {
-                hyperlinkButton.isHidden = false
-                return
-            }
-        }
-        hyperlinkButton.isHidden = true
     }
 }
 
