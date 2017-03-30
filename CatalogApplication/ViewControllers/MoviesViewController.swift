@@ -45,7 +45,7 @@ extension MoviesViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MediaCell", for: indexPath) as! MediaTableViewCell
         if let movies = movies {
-            cell.configureMovieCell(movie: movies[indexPath.row])
+            cell.configureCell(movies[indexPath.row])
         }
         return cell
     }

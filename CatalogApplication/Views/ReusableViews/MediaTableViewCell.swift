@@ -15,7 +15,7 @@ class MediaTableViewCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     
-    func configureCell(object: Any) {
+    func configureCell(_ object: Any) {
         if let object = object as? ListObject {
             titleLabel.text = object.title
             dateLabel.text = object.date
