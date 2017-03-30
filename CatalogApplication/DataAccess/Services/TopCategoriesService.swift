@@ -10,19 +10,10 @@ import Foundation
 import Alamofire
 
 
-struct TopCategoriesService {
-    
-    static let noContentError = NSError.init(domain: "", code: 204, userInfo: nil)
-    
+class TopCategoriesService: Service {
     static func getTop(category: Categories, onComplete: @escaping (_ topCategories: Dictionary<String, Any>?, _ error: Error?) -> Void) {
         Alamofire.request(MediaRouter.getTop(category: category)).responseJSON { (response) in
-            if let JSON = response.result.value as? Dictionary<String, Any> {
-                onComplete(JSON, nil)
-            } else if let error = response.error {
-                onComplete(nil, error)
-            } else {
-                onComplete(nil, noContentError)
-            }
+            handleResponse(response: response, onComplete: onComplete)
         }
     }
 }

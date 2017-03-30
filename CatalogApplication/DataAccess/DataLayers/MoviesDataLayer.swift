@@ -9,10 +9,7 @@
 import Foundation
 import ObjectMapper
 
-struct MoviesDataLayer {
-    
-    static let wrongContentError = NSError.init(domain: "", code: 204, userInfo: nil)
-    
+class MoviesDataLayer: DataLayer {
     static func getMovies(from offset: Int, onComplete: @escaping (_ movies: [Movie]?, _ error: Error?) -> Void) {
         MoviesService.getMovies(from: offset) { (moviesJSON, error) in
             if moviesJSON != nil {
