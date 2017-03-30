@@ -15,12 +15,14 @@ class MediaTableViewCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     
+    let defaultBookImageName = "book-icon"
+    
     func configureCell(_ object: Any) {
         if let object = object as? ListObject {
             titleLabel.text = object.title
             dateLabel.text = object.date
             if let _ = object as? Book {
-                previewImageView.image = UIImage.init(named: "book-icon")
+                previewImageView.image = UIImage.init(named: defaultBookImageName)
             } else {
                 if let url = object.imageURL {
                     previewImageView.af_setImage(withURL: url)

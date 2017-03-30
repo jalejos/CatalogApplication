@@ -10,11 +10,15 @@ import UIKit
 
 class MediaTableViewController: UITableViewController {
 
+    let localNibName = "MediaTableViewCell"
+    let cellId = "MediaCell"
+    let estimatedCellHeight = CGFloat(70)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.register(UINib(nibName: "MediaTableViewCell", bundle: nil), forCellReuseIdentifier: "MediaCell")
+        tableView.register(UINib(nibName: localNibName, bundle: nil), forCellReuseIdentifier: cellId)
         self.tableView.rowHeight = UITableViewAutomaticDimension
-        self.tableView.estimatedRowHeight = 70
+        self.tableView.estimatedRowHeight = estimatedCellHeight
     }
 
     // MARK: - Table view data source
