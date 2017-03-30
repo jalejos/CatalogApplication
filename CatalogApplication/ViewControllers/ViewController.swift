@@ -39,7 +39,8 @@ class ViewController: UIViewController {
     func setupLoginButton() {
         let loginButton = LoginButton(readPermissions: [.publicProfile, .email])
         loginButton.center = view.center
-        loginButton.delegate = self
+        loginButton.delegate = LoginHandler.sharedInstance
+        LoginHandler.sharedInstance.onLoginComplete = { self.userLoggedIn() }
         view.addSubview(loginButton)
     }
     
@@ -48,17 +49,6 @@ class ViewController: UIViewController {
     }
 
 }
-
-extension ViewController: LoginButtonDelegate {
-    func loginButtonDidCompleteLogin(_ loginButton: LoginButton, result: LoginResult) {
-        userLoggedIn()
-    }
-    
-    func loginButtonDidLogOut(_ loginButton: LoginButton) {
-        
-    }
-}
-
 extension ViewController {
      @IBAction func unwindToMenu(segue: UIStoryboardSegue) {}
 }

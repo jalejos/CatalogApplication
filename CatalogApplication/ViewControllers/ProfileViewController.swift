@@ -44,19 +44,12 @@ class ProfileViewController: UIViewController {
     func setupLogoutButton() {
         let loginButton = LoginButton(readPermissions: [.publicProfile, .email])
         loginButton.center = view.center
-        loginButton.delegate = self
+        loginButton.delegate = LoginHandler.sharedInstance
+        LoginHandler.sharedInstance.onLogoutComplete = { self.userLoggedOut() }
         view.addSubview(loginButton)
     }
-}
-
-extension ProfileViewController: LoginButtonDelegate {
     
-    func loginButtonDidCompleteLogin(_ loginButton: LoginButton, result: LoginResult) {
-        
-    }
-    
-    func loginButtonDidLogOut(_ loginButton: LoginButton) {
+    func userLoggedOut() {
         self.performSegue(withIdentifier: "logoutSegue", sender: self)
     }
-    
 }
