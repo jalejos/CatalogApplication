@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AlamofireImage
 import FacebookCore
 import FacebookLogin
 
@@ -33,6 +34,12 @@ class ProfileViewController: UIViewController {
                     if let responseDictionary = graphResponse.dictionaryValue {
                         self.nameLabel.text = responseDictionary["name"] as? String
                         self.emailLabel.text = responseDictionary["email"] as? String
+                        if let id = responseDictionary["id"] {
+                            let url = URL.init(string: "http://graph.facebook.com/\(id)/picture?type=large&return_ssl_resources=1")
+                            if let url = url {
+                                self.profileImageView.af_setImage(withURL: url)
+                            }
+                        }
                     }
                     break
                 case .failed(let error):
