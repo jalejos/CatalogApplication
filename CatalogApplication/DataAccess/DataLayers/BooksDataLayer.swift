@@ -13,7 +13,7 @@ class BooksDataLayer: DataLayer {
     static func getBooks(from offset: Int, onComplete: @escaping (_ books: [Book]?, _ error: Error?) -> Void) {
         BooksService.getBooks(from: offset) { (booksJSON, error) in
             if booksJSON != nil {
-                guard let arrayJSON = booksJSON!["results"] as? Array<Dictionary<String, Any>> else {
+                guard let arrayJSON = booksJSON![jsonKey] as? Array<Dictionary<String, Any>> else {
                     onComplete(nil, wrongContentError);
                     return
                 }

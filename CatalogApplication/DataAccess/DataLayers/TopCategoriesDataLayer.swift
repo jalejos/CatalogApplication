@@ -13,7 +13,7 @@ class TopCategoriesDataLayer: DataLayer{
     static func getTop(category: Categories, onComplete: @escaping (_ objects: [TopObject]?, _ error: Error?) -> Void) {
         TopCategoriesService.getTop(category: category) { (categoriesJSON, error) in
             if categoriesJSON != nil {
-                guard let arrayJSON = categoriesJSON!["results"] as? Array<Dictionary<String, Any>> else {
+                guard let arrayJSON = categoriesJSON![jsonKey] as? Array<Dictionary<String, Any>> else {
                     onComplete(nil, wrongContentError);
                     return
                 }

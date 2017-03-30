@@ -13,7 +13,7 @@ class MoviesDataLayer: DataLayer {
     static func getMovies(from offset: Int, onComplete: @escaping (_ movies: [Movie]?, _ error: Error?) -> Void) {
         MoviesService.getMovies(from: offset) { (moviesJSON, error) in
             if moviesJSON != nil {
-                guard let arrayJSON = moviesJSON!["results"] as? Array<Dictionary<String, Any>> else {
+                guard let arrayJSON = moviesJSON![jsonKey] as? Array<Dictionary<String, Any>> else {
                     onComplete(nil, wrongContentError);
                     return
                 }
