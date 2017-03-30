@@ -11,6 +11,8 @@ import FacebookCore
 import FacebookLogin
 
 class ViewController: UIViewController {
+    
+    let loginSegue = "loginSegue"
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,7 +47,7 @@ class ViewController: UIViewController {
     }
     
     func userLoggedIn() {
-        self.performSegue(withIdentifier: "loginSegue", sender: self)
+        self.performSegue(withIdentifier: loginSegue, sender: self)
     }
 
 }

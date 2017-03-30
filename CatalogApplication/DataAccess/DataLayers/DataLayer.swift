@@ -10,4 +10,5 @@ import Foundation
 
 class DataLayer {
     static let wrongContentError = NSError.init(domain: "", code: 204, userInfo: nil)
+    static let jsonKey = "results"
 }

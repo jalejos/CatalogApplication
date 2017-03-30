@@ -12,6 +12,7 @@ class BooksViewController: MediaTableViewController {
 
     var books: [Book]?
     var book: Book?
+    let selectionSegue = "BookSegue"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,7 +39,7 @@ extension BooksViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "MediaCell", for: indexPath) as! MediaTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! MediaTableViewCell
         if let books = books {
             cell.configureCell(books[indexPath.row])
         }
@@ -48,14 +49,14 @@ extension BooksViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let books = books {
             book = books[indexPath.row]
-            self.performSegue(withIdentifier: "BookSegue", sender: self)
+            self.performSegue(withIdentifier: selectionSegue, sender: self)
         }
     }
 }
 
 extension BooksViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "BookSegue" {
+        if segue.identifier == selectionSegue {
             let detailsView = segue.destination as! MediaDetailsViewController
             detailsView.object = book
         }
