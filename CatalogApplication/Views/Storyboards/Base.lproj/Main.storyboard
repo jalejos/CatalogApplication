@@ -163,9 +163,9 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wNA-2i-dYS">
-                                <rect key="frame" x="174" y="199" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wNA-2i-dYS">
+                                <rect key="frame" x="174" y="199" width="29" height="29"/>
+                                <state key="normal" image="link-icon"/>
                                 <connections>
                                     <segue destination="3zG-oY-9Bw" kind="show" identifier="WebSegue" id="p1n-mz-jdj"/>
                                 </connections>
@@ -382,6 +382,7 @@
     </scenes>
     <resources>
         <image name="book-icon" width="29" height="29"/>
+        <image name="link-icon" width="29" height="29"/>
         <image name="movie-icon" width="29" height="29"/>
         <image name="profile-icon" width="29" height="29"/>
         <image name="star-icon" width="29" height="29"/>
