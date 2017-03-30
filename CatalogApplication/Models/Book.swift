@@ -18,7 +18,7 @@ class Book: ListObject {
     
     override func mapping(map: Map) {
         title <- (map["title"])
-        date <- (map["ranks_history.0.published_date"])
+        date <- (map["ranks_history.0.published_date"], transformDateFormat)
         author <- (map["author"])
         rating <- (map["age_group"])
         summary <- (map["description"])
