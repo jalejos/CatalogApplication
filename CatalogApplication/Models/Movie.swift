@@ -18,7 +18,7 @@ class Movie: ListObject {
     
     override func mapping(map: Map) {
         title <- (map["display_title"])
-        date <- (map["publication_date"])
+        date <- (map["publication_date"], transformDateFormat)
         imageURL <- (map["multimedia.src"], transformURL)
         author <- (map["byline"])
         rating <- (map["mpaa_rating"])
