@@ -9,10 +9,7 @@
 import Foundation
 import ObjectMapper
 
-struct TopCategoriesDataLayer {
-    
-    static let wrongContentError = NSError.init(domain: "", code: 204, userInfo: nil)
-    
+class TopCategoriesDataLayer: DataLayer{
     static func getTop(category: Categories, onComplete: @escaping (_ objects: [TopObject]?, _ error: Error?) -> Void) {
         TopCategoriesService.getTop(category: category) { (categoriesJSON, error) in
             if categoriesJSON != nil {
