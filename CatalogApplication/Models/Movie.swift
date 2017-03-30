@@ -10,19 +10,20 @@ import Foundation
 import ObjectMapper
 
 class Movie: ListObject {
-    var rating: String = ""
+    dynamic var rating: String = ""
     
     convenience required init?(map: Map) {
         self.init()
     }
     
     override func mapping(map: Map) {
+        id <- (map["headline"])
         title <- (map["display_title"])
         date <- (map["publication_date"], transformDateFormat)
-        imageURL <- (map["multimedia.src"], transformURL)
+        imageString <- (map["multimedia.src"])
         author <- (map["byline"])
         rating <- (map["mpaa_rating"])
         summary <- (map["summary_short"])
-        articleURL <- (map["link.url"], transformURL)
+        articleString <- (map["link.url"])
     }
 }
