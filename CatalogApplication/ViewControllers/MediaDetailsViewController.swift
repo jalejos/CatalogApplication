@@ -25,23 +25,33 @@ class MediaDetailsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        if let movie = object as? Movie {
-            configWithMovie(movie: movie)
-        } else if let book = object as? Book {
-            configWithBook(book: book)
-        } else if let object = object as? ListObject {
-            configWithGeneric(object: object)
+        if let object = object as? ListObject{
+            configWith(object: object)
+            if let movie = object as? Movie {
+                configWithMovie(movie: movie)
+            } else if let book = object as? Book {
+                configWithBook(book: book)
+            } else if let object = object as? TopObject {
+                configWithTop(object: object)
+            }
         }
-        configPreviewImageView()
         checkHyperlinkButtonStatus()
+        configPreviewImageView()
         // Do any additional setup after loading the view.
     }
     
+    func configWith(object: ListObject) {
+        titleLabel.text = object.title
+        directorLabel.text = object.author
+        dateLabel.text = object.date
+        descriptionTextView.text = object.summary
+        linkURL = object.articleURL
+        if let url = object.imageURL {
+            previewImageView.af_setImage(withURL: url)
+        }
+    }
+    
     func configWithMovie(movie: Movie) {
-        titleLabel.text = movie.title
-        directorLabel.text = movie.director
-        dateLabel.text = movie.date
-        descriptionTextView.text = movie.summary
         var rating: String
         if movie.rating.isEmpty {
             rating = "N/A"
@@ -49,17 +59,9 @@ class MediaDetailsViewController: UIViewController {
             rating = movie.rating
         }
         ratingLabel.text = "Rating: \(rating)"
-        if let url = movie.imageURL {
-            previewImageView.af_setImage(withURL: url)
-        }
-        linkURL = movie.articleURL
     }
     
     func configWithBook(book: Book) {
-        titleLabel.text = book.title
-        directorLabel.text = book.author
-        dateLabel.text = book.date
-        descriptionTextView.text = book.summary
         var rating: String
         if book.rating.isEmpty {
             rating = "N/A"
@@ -69,21 +71,27 @@ class MediaDetailsViewController: UIViewController {
         ratingLabel.text = "Rating: \(rating)"
         
         previewImageView.image = UIImage.init(named: "book-icon")
-        linkURL = book.articleURL
     }
     
-    func configWithGeneric(object: ListObject) {
-        titleLabel.text = object.title
-        directorLabel.text = object.author
-        dateLabel.text = object.date
-        descriptionTextView.text = object.summary
+    func configWithTop(object: ListObject) {
         ratingLabel.text = ""
-        if let url = object.imageURL {
-            previewImageView.af_setImage(withURL: url)
-        }
-        linkURL = object.articleURL
     }
-    
+}
+
+extension MediaDetailsViewController {
+    func checkHyperlinkButtonStatus(){
+        if let url = linkURL {
+            if !url.path.isEmpty {
+                hyperlinkButton.isHidden = false
+                return
+            }
+        }
+        hyperlinkButton.isHidden = true
+    }
+}
+
+
+extension MediaDetailsViewController {
     func configPreviewImageView() {
         let gestureRecognizer = UITapGestureRecognizer.init(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
         previewImageView.isUserInteractionEnabled = true
@@ -96,16 +104,6 @@ class MediaDetailsViewController: UIViewController {
                 self.navigationController?.present(viewController, animated: true)
             }
         }
-    }
-    
-    func checkHyperlinkButtonStatus(){
-        if let url = linkURL {
-            if !url.path.isEmpty {
-                hyperlinkButton.isHidden = false
-                return
-            }
-        }
-        hyperlinkButton.isHidden = true
     }
 }
 

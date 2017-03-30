@@ -38,6 +38,7 @@
 		31F182AD1E8C2622002635CA /* ListObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F182AC1E8C2622002635CA /* ListObject.swift */; };
 		31F182AF1E8C2940002635CA /* TopCategoriesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F182AE1E8C2940002635CA /* TopCategoriesService.swift */; };
 		31F182B11E8C2BF3002635CA /* TopCategoriesDataLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F182B01E8C2BF3002635CA /* TopCategoriesDataLayer.swift */; };
+		31F182B31E8CE5ED002635CA /* TopObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F182B21E8CE5ED002635CA /* TopObject.swift */; };
 		7D872E0AD77552922A4D72DC /* Pods_CatalogApplication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 086D1B6E6FCDE95D99E2EF53 /* Pods_CatalogApplication.framework */; };
 		9BE0EEE4F8FD921694B9833E /* Pods_CatalogApplicationUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01290D279A0F3A000442AB9D /* Pods_CatalogApplicationUITests.framework */; };
 		FBE4310267742BDD12A41413 /* Pods_CatalogApplicationTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C4F4FA6BF8A5C2730D02C56 /* Pods_CatalogApplicationTests.framework */; };
@@ -80,27 +81,28 @@
 		31E895461E85DB220038E70A /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		31F182801E898A27002635CA /* MediaTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaTableViewController.swift; sourceTree = "<group>"; };
 		31F182821E898BDE002635CA /* MoviesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviesViewController.swift; sourceTree = "<group>"; };
-		31F182841E898C4E002635CA /* MediaTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MediaTableViewCell.xib; path = MediaTableViewCell.xib; sourceTree = "<group>"; };
-		31F182861E898D87002635CA /* MediaTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MediaTableViewCell.swift; path = MediaTableViewCell.swift; sourceTree = "<group>"; };
-		31F182881E89B963002635CA /* MoviesService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MoviesService.swift; path = MoviesService.swift; sourceTree = "<group>"; };
-		31F1828A1E89B971002635CA /* MoviesDataLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MoviesDataLayer.swift; path = MoviesDataLayer.swift; sourceTree = "<group>"; };
-		31F1828C1E89B995002635CA /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = APIManager.swift; path = APIManager.swift; sourceTree = "<group>"; };
-		31F182901E89BE73002635CA /* MediaRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MediaRouter.swift; path = MediaRouter.swift; sourceTree = "<group>"; };
-		31F182921E89CE13002635CA /* Movie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Movie.swift; path = Movie.swift; sourceTree = "<group>"; };
+		31F182841E898C4E002635CA /* MediaTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MediaTableViewCell.xib; sourceTree = "<group>"; };
+		31F182861E898D87002635CA /* MediaTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaTableViewCell.swift; sourceTree = "<group>"; };
+		31F182881E89B963002635CA /* MoviesService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviesService.swift; sourceTree = "<group>"; };
+		31F1828A1E89B971002635CA /* MoviesDataLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviesDataLayer.swift; sourceTree = "<group>"; };
+		31F1828C1E89B995002635CA /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		31F182901E89BE73002635CA /* MediaRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaRouter.swift; sourceTree = "<group>"; };
+		31F182921E89CE13002635CA /* Movie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		31F182941E8AC63F002635CA /* MediaDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaDetailsViewController.swift; sourceTree = "<group>"; };
 		31F182961E8ACFF9002635CA /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		31F182981E8AE123002635CA /* BooksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BooksViewController.swift; sourceTree = "<group>"; };
-		31F1829A1E8AE166002635CA /* BooksDataLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BooksDataLayer.swift; path = BooksDataLayer.swift; sourceTree = "<group>"; };
-		31F1829C1E8AE180002635CA /* BooksService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BooksService.swift; path = BooksService.swift; sourceTree = "<group>"; };
-		31F1829E1E8AE2C0002635CA /* Book.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Book.swift; path = Book.swift; sourceTree = "<group>"; };
+		31F1829A1E8AE166002635CA /* BooksDataLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BooksDataLayer.swift; sourceTree = "<group>"; };
+		31F1829C1E8AE180002635CA /* BooksService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BooksService.swift; sourceTree = "<group>"; };
+		31F1829E1E8AE2C0002635CA /* Book.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		31F182A01E8B1C43002635CA /* TopCategoriesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopCategoriesTableViewController.swift; sourceTree = "<group>"; };
-		31F182A21E8B1CA9002635CA /* Categories.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Categories.swift; path = Categories.swift; sourceTree = "<group>"; };
-		31F182A41E8B1F4D002635CA /* CategoryTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CategoryTableViewCell.xib; path = CategoryTableViewCell.xib; sourceTree = "<group>"; };
-		31F182A61E8B1FDC002635CA /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CategoryTableViewCell.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
+		31F182A21E8B1CA9002635CA /* Categories.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Categories.swift; sourceTree = "<group>"; };
+		31F182A41E8B1F4D002635CA /* CategoryTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoryTableViewCell.xib; sourceTree = "<group>"; };
+		31F182A61E8B1FDC002635CA /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
 		31F182A81E8B3184002635CA /* CategoryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryTableViewController.swift; sourceTree = "<group>"; };
-		31F182AC1E8C2622002635CA /* ListObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ListObject.swift; path = ListObject.swift; sourceTree = "<group>"; };
-		31F182AE1E8C2940002635CA /* TopCategoriesService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TopCategoriesService.swift; path = TopCategoriesService.swift; sourceTree = "<group>"; };
-		31F182B01E8C2BF3002635CA /* TopCategoriesDataLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TopCategoriesDataLayer.swift; path = TopCategoriesDataLayer.swift; sourceTree = "<group>"; };
+		31F182AC1E8C2622002635CA /* ListObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListObject.swift; sourceTree = "<group>"; };
+		31F182AE1E8C2940002635CA /* TopCategoriesService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopCategoriesService.swift; sourceTree = "<group>"; };
+		31F182B01E8C2BF3002635CA /* TopCategoriesDataLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopCategoriesDataLayer.swift; sourceTree = "<group>"; };
+		31F182B21E8CE5ED002635CA /* TopObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopObject.swift; sourceTree = "<group>"; };
 		3A3CBF246F36011EB0611C04 /* Pods-CatalogApplicationTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatalogApplicationTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CatalogApplicationTests/Pods-CatalogApplicationTests.debug.xcconfig"; sourceTree = "<group>"; };
 		3C4F4FA6BF8A5C2730D02C56 /* Pods_CatalogApplicationTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CatalogApplicationTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		477B2E9865F9F93D2BD1A996 /* Pods-CatalogApplicationTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatalogApplicationTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CatalogApplicationTests/Pods-CatalogApplicationTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -290,6 +292,7 @@
 				31F182A21E8B1CA9002635CA /* Categories.swift */,
 				31F182AC1E8C2622002635CA /* ListObject.swift */,
 				31F182921E89CE13002635CA /* Movie.swift */,
+				31F182B21E8CE5ED002635CA /* TopObject.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -600,6 +603,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31F182B31E8CE5ED002635CA /* TopObject.swift in Sources */,
 				31F182AF1E8C2940002635CA /* TopCategoriesService.swift in Sources */,
 				31E895471E85DB220038E70A /* ProfileViewController.swift in Sources */,
 				31F1828D1E89B995002635CA /* APIManager.swift in Sources */,
