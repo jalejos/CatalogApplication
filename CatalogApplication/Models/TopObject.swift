@@ -15,12 +15,27 @@ class TopObject: ListObject {
         self.init()
     }
     
+        let transformId = TransformOf<String, Int>(fromJSON: { (value: Int?) -> String? in
+            // transform value from Int to String
+            if let value = value {
+                return String(value)
+            }
+            return nil
+        }, toJSON: { (value: String?) -> Int? in
+            // transform value from String to Int
+            if let value = value {
+                return Int(value)
+            }
+            return nil
+        })
+    
     override func mapping(map: Map) {
+        id <- (map["id"], transformId)
         title <- (map["title"])
         date <- (map["published_date"], transformDateFormat)
         author <- (map["byline"])
         summary <- (map["abstract"])
-        articleURL <- (map["url"], transformURL)
-        imageURL <- (map["media.0.media-metadata.2.url"], transformURL)
+        articleString <- (map["url"])
+        imageString <- (map["media.0.media-metadata.2.url"])
     }
 }
