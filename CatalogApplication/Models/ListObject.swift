@@ -36,11 +36,5 @@ class ListObject: Mappable {
     }
     
     func mapping(map: Map) {
-        title <- (map["title"])
-        date <- (map["published_date"])
-        author <- (map["byline"])
-        summary <- (map["abstract"])
-        articleURL <- (map["url"], transformURL)
-        imageURL <- (map["media.0.media-metadata.2.url"], transformURL)
     }
 }
