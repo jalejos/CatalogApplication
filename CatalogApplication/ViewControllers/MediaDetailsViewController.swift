@@ -22,6 +22,8 @@ class MediaDetailsViewController: UIViewController {
     
     var object: Any?
     var linkURL: URL?
+    let defaultBookImageName = "book-icon"
+    let selectionSegue = "WebSegue"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -70,7 +72,7 @@ class MediaDetailsViewController: UIViewController {
         }
         ratingLabel.text = "Rating: \(rating)"
         
-        previewImageView.image = UIImage.init(named: "book-icon")
+        previewImageView.image = UIImage.init(named: defaultBookImageName)
     }
     
     func configWithTop(object: ListObject) {
@@ -99,7 +101,7 @@ extension MediaDetailsViewController {
     }
     
     func imageTapped(tapGestureRecognizer: UITapGestureRecognizer) {
-        if previewImageView.image != UIImage.init(named: "book-icon") {
+        if previewImageView.image != UIImage.init(named: defaultBookImageName) {
             if let viewController = DTPhotoViewerController(referencedView: previewImageView, image: previewImageView.image) {
                 self.navigationController?.present(viewController, animated: true)
             }
@@ -109,7 +111,7 @@ extension MediaDetailsViewController {
 
 extension MediaDetailsViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "WebSegue" {
+        if segue.identifier == selectionSegue {
             let webDisplay = segue.destination as! WebViewController
             webDisplay.url = linkURL
         }
