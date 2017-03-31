@@ -17,6 +17,10 @@ class MediaTableViewCell: UITableViewCell {
     
     let defaultBookImageName = "book-icon"
     
+    static func reusableCellID() -> String {
+        return String(describing: self)
+    }
+    
     func configureCell(_ object: Any) {
         if let object = object as? ListObject {
             titleLabel.text = object.title
