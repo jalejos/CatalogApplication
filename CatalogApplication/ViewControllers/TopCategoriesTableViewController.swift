@@ -10,7 +10,7 @@ import UIKit
 
 class TopCategoriesTableViewController: UITableViewController {
     
-    var category: Categories?
+    var category: Category?
     let localNibName = "CategoryTableViewCell"
     let cellId = "CategoryCell"
     let selectionSegue = "CategorySegue"
@@ -26,17 +26,17 @@ class TopCategoriesTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return Categories.array.count
+        return Category.array.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! CategoryTableViewCell
-        cell.configWithCategory(category: Categories.array[indexPath.row].rawValue)
+        cell.configWithCategory(category: Category.array[indexPath.row].rawValue)
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        category = Categories.array[indexPath.row]
+        category = Category.array[indexPath.row]
         self.performSegue(withIdentifier: selectionSegue, sender: self)
     }
 

@@ -11,7 +11,7 @@ import Alamofire
 enum MediaRouter: URLRequestConvertible {
     case getMovies(offset: Int)
     case getBooks(offset: Int)
-    case getTop(category: Categories)
+    case getTop(category: Category)
     
     var url: URL {
         switch self {

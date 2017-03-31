@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum Categories: String {
+enum Category: String {
     /*
      * Enum doesn't support case arrays, which is necesarry for the application. If you need to add further cases, add them in the array variable.
      */
@@ -17,7 +17,7 @@ enum Categories: String {
     case Arts = "Arts"
     case Movies = "Movies"
     
-    static var array: Array<Categories> {
-        return [Categories.Food, Categories.Cars, Categories.Arts, Categories.Movies]
+    static var array: Array<Category> {
+        return [Category.Food, Category.Cars, Category.Arts, Category.Movies]
     }
 }

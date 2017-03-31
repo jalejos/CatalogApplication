@@ -18,7 +18,7 @@ class CategoryTableViewController: MediaTableViewController {
         super.viewDidLoad()
     }
 
-    func configureWith(category: Categories) {
+    func configureWith(category: Category) {
         TopCategoriesDataLayer.getTop(category: category) { (objects, error) in
             if objects != nil {
                 self.tableObjects = objects
