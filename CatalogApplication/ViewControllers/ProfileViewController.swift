@@ -9,13 +9,14 @@
 import UIKit
 import AlamofireImage
 import FacebookCore
-import FacebookLogin
+import FBSDKLoginKit
 
 class ProfileViewController: UIViewController {
 
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var emailLabel: UILabel!
+    @IBOutlet weak var logoutButton: FBSDKLoginButton!
     
     let logoutSegue = "logoutSegue"
 
@@ -51,11 +52,9 @@ class ProfileViewController: UIViewController {
     }
     
     func setupLogoutButton() {
-        let loginButton = LoginButton(readPermissions: [.publicProfile, .email])
-        loginButton.center = view.center
-        loginButton.delegate = LoginHandler.sharedInstance
+        logoutButton.readPermissions =  ["public_profile", "email"]
+        logoutButton.delegate = LoginHandler.sharedInstance
         LoginHandler.sharedInstance.onLogoutComplete = { self.userLoggedOut() }
-        view.addSubview(loginButton)
     }
     
     func userLoggedOut() {

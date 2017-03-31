@@ -7,18 +7,18 @@
 //
 
 import Foundation
-import FacebookLogin
+import FBSDKLoginKit
 
-struct LoginHandler: LoginButtonDelegate {
+class LoginHandler: NSObject, FBSDKLoginButtonDelegate {
     
     static var sharedInstance = LoginHandler()
     var onLoginComplete: (Void) -> (Void) = {}
     var onLogoutComplete: (Void) -> (Void) = {}
-    func loginButtonDidCompleteLogin(_ loginButton: LoginButton, result: LoginResult) {
+    func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: Error!) {
         LoginHandler.sharedInstance.onLoginComplete()
     }
     
-    func loginButtonDidLogOut(_ loginButton: LoginButton) {
+    func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {
         LoginHandler.sharedInstance.onLogoutComplete()
     }
 }
