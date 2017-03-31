@@ -8,12 +8,14 @@
 
 import UIKit
 import FacebookCore
-import FacebookLogin
+import FBSDKLoginKit
 
 class ViewController: UIViewController {
     
     let loginSegue = "loginSegue"
 
+    @IBOutlet weak var loginButton: FBSDKLoginButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -39,11 +41,9 @@ class ViewController: UIViewController {
     }
     
     func setupLoginButton() {
-        let loginButton = LoginButton(readPermissions: [.publicProfile, .email])
-        loginButton.center = view.center
+        loginButton.readPermissions =  ["public_profile", "email"]
         loginButton.delegate = LoginHandler.sharedInstance
         LoginHandler.sharedInstance.onLoginComplete = { self.userLoggedIn() }
-        view.addSubview(loginButton)
     }
     
     func userLoggedIn() {
