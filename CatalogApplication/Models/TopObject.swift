@@ -10,27 +10,19 @@ import Foundation
 import ObjectMapper
 
 class TopObject: ListObject {
+    dynamic var id: Int = 0
     
     convenience required init?(map: Map) {
         self.init()
     }
     
-        let transformId = TransformOf<String, Int>(fromJSON: { (value: Int?) -> String? in
-            // transform value from Int to String
-            if let value = value {
-                return String(value)
-            }
-            return nil
-        }, toJSON: { (value: String?) -> Int? in
-            // transform value from String to Int
-            if let value = value {
-                return Int(value)
-            }
-            return nil
-        })
+    
+    override static func primaryKey() -> String {
+        return "id"
+    }
     
     override func mapping(map: Map) {
-        id <- (map["id"], transformId)
+        id <- (map["id"])
         title <- (map["title"])
         date <- (map["published_date"], transformDateFormat)
         author <- (map["byline"])

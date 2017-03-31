@@ -11,7 +11,6 @@ import ObjectMapper
 import RealmSwift
 
 class ListObject: Object, Mappable {
-    dynamic var id: String = ""
     dynamic var title: String = ""
     dynamic var date: String = ""
     dynamic var author: String = ""
@@ -47,10 +46,6 @@ class ListObject: Object, Mappable {
     
     override static func indexedProperties() -> [String] {
         return ["title"]
-    }
-    
-    override static func primaryKey() -> String {
-        return "id"
     }
     
     convenience required init?(map: Map) {

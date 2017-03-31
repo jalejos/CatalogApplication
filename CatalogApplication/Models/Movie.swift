@@ -10,10 +10,15 @@ import Foundation
 import ObjectMapper
 
 class Movie: ListObject {
+    dynamic var id: String = ""
     dynamic var rating: String = ""
     
     convenience required init?(map: Map) {
         self.init()
+    }
+    
+    override static func primaryKey() -> String {
+        return "id"
     }
     
     override func mapping(map: Map) {
