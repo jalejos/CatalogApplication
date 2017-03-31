@@ -17,6 +17,7 @@ class MoviesViewController: MediaTableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         getMovies(offset: 0)
+        print(String(describing: MediaTableViewCell.self))
         // Do any additional setup after loading the view.
     }
 
@@ -49,11 +50,11 @@ extension MoviesViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let movies = movies {
             if indexPath.row < movies.count {
-                let mediaCell = tableView.dequeueReusableCell(withIdentifier: mediaCellId, for: indexPath) as! MediaTableViewCell
+                let mediaCell = tableView.dequeueReusableCell(withIdentifier: MediaTableViewCell.reusableCellID(), for: indexPath) as! MediaTableViewCell
                 mediaCell.configureCell(movies[indexPath.row])
                 return mediaCell
             } else {
-                let loadCell = tableView.dequeueReusableCell(withIdentifier: loadCellId, for: indexPath)
+                let loadCell = tableView.dequeueReusableCell(withIdentifier: reusableLoadCellID, for: indexPath)
                 return loadCell
             }
         }

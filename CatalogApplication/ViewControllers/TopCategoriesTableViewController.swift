@@ -11,14 +11,12 @@ import UIKit
 class TopCategoriesTableViewController: UITableViewController {
     
     var category: Category?
-    let localNibName = "CategoryTableViewCell"
-    let cellId = "CategoryCell"
     let selectionSegue = "CategorySegue"
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.register(UINib(nibName: localNibName, bundle: nil), forCellReuseIdentifier: cellId)
+        tableView.register(UINib(nibName: CategoryTableViewCell.reusableCellID(), bundle: nil), forCellReuseIdentifier: CategoryTableViewCell.reusableCellID())
         self.tableView.rowHeight = UITableViewAutomaticDimension
         self.tableView.estimatedRowHeight = 80
     }
@@ -30,7 +28,7 @@ class TopCategoriesTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! CategoryTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: CategoryTableViewCell.reusableCellID(), for: indexPath) as! CategoryTableViewCell
         cell.configWithCategory(category: Category.array[indexPath.row].rawValue)
         return cell
     }

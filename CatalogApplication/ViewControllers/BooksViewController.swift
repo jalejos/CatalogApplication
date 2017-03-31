@@ -48,11 +48,11 @@ extension BooksViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let books = books {
             if indexPath.row < books.count {
-                let bookCell = tableView.dequeueReusableCell(withIdentifier: mediaCellId, for: indexPath) as! MediaTableViewCell
+                let bookCell = tableView.dequeueReusableCell(withIdentifier: MediaTableViewCell.reusableCellID(), for: indexPath) as! MediaTableViewCell
                 bookCell.configureCell(books[indexPath.row])
                 return bookCell
             } else {
-                let loadCell = tableView.dequeueReusableCell(withIdentifier: loadCellId, for: indexPath)
+                let loadCell = tableView.dequeueReusableCell(withIdentifier: reusableLoadCellID, for: indexPath)
                 return loadCell
             }
         }

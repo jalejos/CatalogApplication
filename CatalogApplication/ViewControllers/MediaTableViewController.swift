@@ -9,17 +9,14 @@
 import UIKit
 
 class MediaTableViewController: UITableViewController {
-
-    let objectNibName = "MediaTableViewCell"
-    let mediaCellId = "MediaCell"
-    let loadNibName = "LoadTableViewCell"
-    let loadCellId = "LoadCell"
+    
     let estimatedCellHeight = CGFloat(70)
+    let reusableLoadCellID = "LoadTableViewCell"
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.register(UINib(nibName: objectNibName, bundle: nil), forCellReuseIdentifier: mediaCellId)
-        tableView.register(UINib(nibName: loadNibName, bundle: nil), forCellReuseIdentifier: loadCellId)
+        tableView.register(UINib(nibName: MediaTableViewCell.reusableCellID(), bundle: nil), forCellReuseIdentifier: MediaTableViewCell.reusableCellID())
+        tableView.register(UINib(nibName: reusableLoadCellID, bundle: nil), forCellReuseIdentifier: reusableLoadCellID)
         self.tableView.rowHeight = UITableViewAutomaticDimension
         self.tableView.estimatedRowHeight = estimatedCellHeight
     }
