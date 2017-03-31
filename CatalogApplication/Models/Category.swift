@@ -12,12 +12,12 @@ enum Category: String {
     /*
      * Enum doesn't support case arrays, which is necesarry for the application. If you need to add further cases, add them in the array variable.
      */
-    case Food = "Food"
-    case Cars = "Automobiles"
-    case Arts = "Arts"
-    case Movies = "Movies"
+    case food = "Food"
+    case car = "Automobiles"
+    case art = "Arts"
+    case movie = "Movies"
     
     static var array: Array<Category> {
-        return [Category.Food, Category.Cars, Category.Arts, Category.Movies]
+        return [.food, .car, .art, .movie]
     }
 }
