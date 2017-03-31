@@ -154,7 +154,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="gHx-sO-pxJ">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="gHx-sO-pxJ">
                                 <rect key="frame" x="20" y="260" width="374" height="419"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
@@ -216,18 +216,24 @@
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="3Q8-Ud-eZE"/>
-                                <exclude reference="Ca8-hH-jSj"/>
-                                <exclude reference="0cv-fJ-9al"/>
-                                <exclude reference="Cb5-Sj-5MC"/>
                                 <exclude reference="68H-zX-HKb"/>
                                 <exclude reference="LnS-kw-0g6"/>
                                 <exclude reference="OqM-C8-fJD"/>
                                 <exclude reference="SqW-zl-PCy"/>
+                                <exclude reference="3Q8-Ud-eZE"/>
+                                <exclude reference="Ca8-hH-jSj"/>
+                                <exclude reference="0cv-fJ-9al"/>
+                                <exclude reference="Cb5-Sj-5MC"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=compact">
                             <mask key="constraints">
+                                <exclude reference="1xx-xd-Oaj"/>
+                                <include reference="68H-zX-HKb"/>
+                                <include reference="LnS-kw-0g6"/>
+                                <include reference="OqM-C8-fJD"/>
+                                <exclude reference="Ppa-9O-zxe"/>
+                                <include reference="SqW-zl-PCy"/>
                                 <include reference="3Q8-Ud-eZE"/>
                                 <include reference="Ca8-hH-jSj"/>
                                 <exclude reference="S2X-e9-uI4"/>
@@ -238,12 +244,6 @@
                                 <exclude reference="b3F-Ra-qBv"/>
                                 <exclude reference="v2y-tv-5vd"/>
                                 <exclude reference="vMY-x4-MUq"/>
-                                <exclude reference="1xx-xd-Oaj"/>
-                                <include reference="68H-zX-HKb"/>
-                                <include reference="LnS-kw-0g6"/>
-                                <include reference="OqM-C8-fJD"/>
-                                <exclude reference="Ppa-9O-zxe"/>
-                                <include reference="SqW-zl-PCy"/>
                             </mask>
                         </variation>
                     </view>
@@ -273,9 +273,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iYh-Q1-OYa">
+                            <webView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iYh-Q1-OYa">
                                 <rect key="frame" x="0.0" y="64" width="414" height="623"/>
-                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
