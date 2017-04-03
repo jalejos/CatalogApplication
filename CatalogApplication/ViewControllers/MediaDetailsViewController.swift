@@ -38,7 +38,6 @@ class MediaDetailsViewController: UIViewController {
         }
         checkHyperlinkButtonStatus()
         configPreviewImageView()
-        // Do any additional setup after loading the view.
     }
     
     func configWith(object: ListObject) {

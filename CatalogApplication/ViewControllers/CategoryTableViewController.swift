@@ -11,10 +11,6 @@ import UIKit
 class CategoryTableViewController: MediaTableViewController {
     
     var tableObjects: [TopObject] = []
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
 
     func configureWith(category: Category) {
         TopCategoriesDataLayer.getTop(category: category) { (objects, error) in

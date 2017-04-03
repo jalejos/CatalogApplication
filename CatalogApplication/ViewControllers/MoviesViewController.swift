@@ -15,7 +15,6 @@ class MoviesViewController: MediaTableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         getMovies()
-        // Do any additional setup after loading the view.
     }
 
     func getMovies(offset: Int = 0) {
