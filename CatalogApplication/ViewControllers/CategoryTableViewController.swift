@@ -10,7 +10,7 @@ import UIKit
 
 class CategoryTableViewController: MediaTableViewController {
     
-    var tableObjects: [TopObject]?
+    var tableObjects: [TopObject] = []
     var object: TopObject?
     let selectionSegue = "CategorySegue"
     
@@ -20,7 +20,7 @@ class CategoryTableViewController: MediaTableViewController {
 
     func configureWith(category: Category) {
         TopCategoriesDataLayer.getTop(category: category) { (objects, error) in
-            if objects != nil {
+            if let objects = objects {
                 self.tableObjects = objects
                 self.tableView.reloadData()
             } else {
@@ -32,27 +32,18 @@ class CategoryTableViewController: MediaTableViewController {
 
 extension CategoryTableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if let tableObjects = tableObjects {
-            return tableObjects.count
-        } else {
-            return 0
-        }
+        return tableObjects.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: MediaTableViewCell.reusableCellID(), for: indexPath) as! MediaTableViewCell
-        if let tableObjects = tableObjects {
-            cell.configureCell(tableObjects[indexPath.row])
-        }
+        cell.configureCell(tableObjects[indexPath.row])
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if let tableObjects = tableObjects {
-            object = tableObjects[indexPath.row]
-            self.performSegue(withIdentifier: selectionSegue, sender: self)
-        }
-    }
+        object = tableObjects[indexPath.row]
+        self.performSegue(withIdentifier: selectionSegue, sender: self)    }
 }
 
 extension CategoryTableViewController {
