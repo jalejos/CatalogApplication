@@ -14,18 +14,22 @@ class TopCategoriesTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        tableView.register(UINib(nibName: CategoryTableViewCell.reusableCellID(), bundle: nil), forCellReuseIdentifier: CategoryTableViewCell.reusableCellID())
-        self.tableView.rowHeight = UITableViewAutomaticDimension
-        self.tableView.estimatedRowHeight = 80
+        configureTableView()
     }
     
-    // MARK: - Table view data source
+    func configureTableView() {
+        tableView.register(UINib(nibName: CategoryTableViewCell.reusableCellID(), bundle: nil), forCellReuseIdentifier: CategoryTableViewCell.reusableCellID())
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 80
+    }
+}
 
+// MARK: - Table view data source
+extension TopCategoriesTableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return Category.array.count
     }
-
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: CategoryTableViewCell.reusableCellID(), for: indexPath) as! CategoryTableViewCell
         cell.configWithCategory(category: Category.array[indexPath.row].rawValue)
