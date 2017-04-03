@@ -24,7 +24,7 @@ class TopObject: ListObject {
     override func mapping(map: Map) {
         id <- (map["id"])
         title <- (map["title"])
-        date <- (map["published_date"], transformDateFormat)
+        date <- (map["published_date"], DateFormatterTransform())
         author <- (map["byline"])
         summary <- (map["abstract"])
         articleString <- (map["url"])
