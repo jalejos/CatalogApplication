@@ -10,7 +10,7 @@ import UIKit
 
 class MoviesViewController: MediaTableViewController {
     
-    var movies: [Movie]?
+    var movies: [Movie] = []
     var movie: Movie?
     let selectionSegue = "MovieSegue"
 
@@ -24,11 +24,7 @@ class MoviesViewController: MediaTableViewController {
     func getMovies(offset: Int = 0) {
         MoviesDataLayer.getMovies(from: offset) { (movies, error) in
             if let movies = movies {
-                if let _ = self.movies {
-                    self.movies?.append(contentsOf: movies)
-                } else {
-                    self.movies = movies
-                }
+                self.movies.append(contentsOf: movies)
                 self.tableView.reloadData()
             } else {
                 print(error ?? "Error getting movies data")
@@ -40,35 +36,26 @@ class MoviesViewController: MediaTableViewController {
 
 extension MoviesViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if let movies = movies {
-            return movies.count + 1
-        } else {
-            return 0
-        }
+        return movies.count + 1
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if let movies = movies {
-            if indexPath.row < movies.count {
-                let mediaCell = tableView.dequeueReusableCell(withIdentifier: MediaTableViewCell.reusableCellID(), for: indexPath) as! MediaTableViewCell
-                mediaCell.configureCell(movies[indexPath.row])
-                return mediaCell
-            } else {
-                let loadCell = tableView.dequeueReusableCell(withIdentifier: reusableLoadCellID, for: indexPath)
-                return loadCell
-            }
+        if indexPath.row < movies.count {
+            let mediaCell = tableView.dequeueReusableCell(withIdentifier: MediaTableViewCell.reusableCellID(), for: indexPath) as! MediaTableViewCell
+            mediaCell.configureCell(movies[indexPath.row])
+            return mediaCell
+        } else {
+            let loadCell = tableView.dequeueReusableCell(withIdentifier: reusableLoadCellID, for: indexPath)
+            return loadCell
         }
-        return UITableViewCell()
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if let movies = movies {
-            if indexPath.row < movies.count {
-                movie = movies[indexPath.row]
-                self.performSegue(withIdentifier: selectionSegue, sender: self)
-            } else {
-                getMovies(offset: movies.count)
-            }
+        if indexPath.row < movies.count {
+            movie = movies[indexPath.row]
+            self.performSegue(withIdentifier: selectionSegue, sender: self)
+        } else {
+            getMovies(offset: movies.count)
         }
     }
 }
