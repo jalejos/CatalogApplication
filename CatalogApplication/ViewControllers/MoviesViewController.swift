@@ -16,12 +16,12 @@ class MoviesViewController: MediaTableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        getMovies(offset: 0)
+        getMovies(offset)
         print(String(describing: MediaTableViewCell.self))
         // Do any additional setup after loading the view.
     }
 
-    func getMovies(offset: Int) {
+    func getMovies(offset: Int = 0) {
         MoviesDataLayer.getMovies(from: offset) { (movies, error) in
             if let movies = movies {
                 if let _ = self.movies {

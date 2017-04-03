@@ -16,10 +16,10 @@ class BooksViewController: MediaTableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        getBooks(offset: 0)
+        getBooks(offset)
     }
     
-    func getBooks(offset: Int) {
+    func getBooks(offset: Int = 0) {
         BooksDataLayer.getBooks(from: offset) { (books, error) in
             if let books = books {
                 if let _ = self.books {
