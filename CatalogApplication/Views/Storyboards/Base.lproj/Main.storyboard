@@ -75,7 +75,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="Hir-AR-R6B"/>
                     <connections>
-                        <segue destination="ezq-09-eyZ" kind="show" identifier="BookSegue" id="oKU-6d-GWg"/>
+                        <segue destination="ezq-09-eyZ" kind="show" identifier="bookSegue" id="oKU-6d-GWg"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XLd-FB-Zt5" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -116,7 +116,7 @@
                     <tabBarItem key="tabBarItem" title="Movies" image="movie-icon" id="SkD-nw-luH"/>
                     <navigationItem key="navigationItem" id="TRw-ev-xMI"/>
                     <connections>
-                        <segue destination="ezq-09-eyZ" kind="show" identifier="MovieSegue" id="bfQ-oT-SRE"/>
+                        <segue destination="ezq-09-eyZ" kind="show" identifier="movieSegue" id="bfQ-oT-SRE"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Sg-bK-hdg" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -177,7 +177,7 @@
                                 <rect key="frame" x="178" y="187.33333333333334" width="29" height="29"/>
                                 <state key="normal" image="link-icon"/>
                                 <connections>
-                                    <segue destination="3zG-oY-9Bw" kind="show" identifier="WebSegue" id="p1n-mz-jdj"/>
+                                    <segue destination="3zG-oY-9Bw" kind="show" identifier="webSegue" id="p1n-mz-jdj"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -445,7 +445,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="0sb-2C-xH8"/>
                     <connections>
-                        <segue destination="eNg-Ny-fUN" kind="show" identifier="CategorySegue" id="WxZ-c3-kDl"/>
+                        <segue destination="eNg-Ny-fUN" kind="show" identifier="categorySegue" id="WxZ-c3-kDl"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="73i-Cz-uzo" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -466,7 +466,7 @@
                         </connections>
                     </tableView>
                     <connections>
-                        <segue destination="ezq-09-eyZ" kind="show" identifier="CategorySegue" id="PAG-Aj-Awj"/>
+                        <segue destination="ezq-09-eyZ" kind="show" identifier="categorySegue" id="PAG-Aj-Awj"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="40B-Uo-yGb" userLabel="First Responder" sceneMemberID="firstResponder"/>

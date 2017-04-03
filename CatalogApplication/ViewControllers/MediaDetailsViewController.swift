@@ -23,7 +23,6 @@ class MediaDetailsViewController: UIViewController {
     var object: Any?
     var linkURL: URL?
     let defaultBookImageName = "book-icon"
-    let selectionSegue = "WebSegue"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -114,7 +113,7 @@ extension MediaDetailsViewController {
 
 extension MediaDetailsViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == selectionSegue {
+        if segue.identifier == SegueHandler.webSegue.rawValue {
             let webDisplay = segue.destination as! WebViewController
             webDisplay.url = linkURL
         }

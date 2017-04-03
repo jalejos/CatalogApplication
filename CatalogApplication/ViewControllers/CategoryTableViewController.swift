@@ -11,7 +11,6 @@ import UIKit
 class CategoryTableViewController: MediaTableViewController {
     
     var tableObjects: [TopObject] = []
-    let selectionSegue = "CategorySegue"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,12 +40,12 @@ extension CategoryTableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.performSegue(withIdentifier: selectionSegue, sender: tableObjects[indexPath.row])    }
+        self.performSegue(withIdentifier: SegueHandler.categorySegue.rawValue, sender: tableObjects[indexPath.row])    }
 }
 
 extension CategoryTableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == selectionSegue {
+        if segue.identifier == SegueHandler.categorySegue.rawValue {
             let detailsView = segue.destination as! MediaDetailsViewController
             detailsView.object = sender as? TopObject
         }

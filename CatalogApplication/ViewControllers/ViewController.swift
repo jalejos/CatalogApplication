@@ -11,8 +11,6 @@ import FacebookCore
 import FBSDKLoginKit
 
 class ViewController: UIViewController {
-    
-    let loginSegue = "loginSegue"
 
     @IBOutlet weak var loginButton: FBSDKLoginButton!
     
@@ -47,7 +45,7 @@ class ViewController: UIViewController {
     }
     
     func userLoggedIn() {
-        self.performSegue(withIdentifier: loginSegue, sender: self)
+        self.performSegue(withIdentifier: SegueHandler.loginSegue.rawValue, sender: self)
     }
 
 }

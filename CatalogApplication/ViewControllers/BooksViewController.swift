@@ -11,7 +11,6 @@ import UIKit
 class BooksViewController: MediaTableViewController {
 
     var books: [Book] = []
-    let selectionSegue = "BookSegue"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,7 +48,7 @@ extension BooksViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.row < books.count {
-            self.performSegue(withIdentifier: selectionSegue, sender: books[indexPath.row])
+            self.performSegue(withIdentifier: SegueHandler.bookSegue.rawValue, sender: books[indexPath.row])
         } else {
             getBooks(offset: books.count)
         }
@@ -58,7 +57,7 @@ extension BooksViewController {
 
 extension BooksViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == selectionSegue {
+        if segue.identifier == SegueHandler.bookSegue.rawValue {
             let detailsView = segue.destination as! MediaDetailsViewController
             detailsView.object = sender as? Book
         }

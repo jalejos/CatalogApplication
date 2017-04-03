@@ -11,7 +11,6 @@ import UIKit
 class MoviesViewController: MediaTableViewController {
     
     var movies: [Movie] = []
-    let selectionSegue = "MovieSegue"
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,7 +49,7 @@ extension MoviesViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.row < movies.count {
-            self.performSegue(withIdentifier: selectionSegue, sender: movies[indexPath.row])
+            self.performSegue(withIdentifier: SegueHandler.movieSegue.rawValue, sender: movies[indexPath.row])
         } else {
             getMovies(offset: movies.count)
         }
@@ -59,7 +58,7 @@ extension MoviesViewController {
 
 extension MoviesViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == selectionSegue {
+        if segue.identifier == SegueHandler.movieSegue.rawValue {
             let detailsView = segue.destination as! MediaDetailsViewController
             detailsView.object = sender as? Movie
         }

@@ -11,7 +11,6 @@ import UIKit
 class TopCategoriesTableViewController: UITableViewController {
     
     var category: Category?
-    let selectionSegue = "CategorySegue"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,14 +34,14 @@ class TopCategoriesTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         category = Category.array[indexPath.row]
-        self.performSegue(withIdentifier: selectionSegue, sender: self)
+        self.performSegue(withIdentifier: SegueHandler.categorySegue.rawValue, sender: self)
     }
 
 }
 
 extension TopCategoriesTableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == selectionSegue {
+        if segue.identifier == SegueHandler.categorySegue.rawValue {
             let categoryView = segue.destination as! CategoryTableViewController
             if let category = category {
                 categoryView.configureWith(category: category) 
