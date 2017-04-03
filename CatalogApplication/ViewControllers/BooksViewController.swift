@@ -10,7 +10,7 @@ import UIKit
 
 class BooksViewController: MediaTableViewController {
 
-    var books: [Book]?
+    var books: [Book] = []
     var book: Book?
     let selectionSegue = "BookSegue"
     
@@ -22,11 +22,7 @@ class BooksViewController: MediaTableViewController {
     func getBooks(offset: Int = 0) {
         BooksDataLayer.getBooks(from: offset) { (books, error) in
             if let books = books {
-                if let _ = self.books {
-                    self.books?.append(contentsOf: books)
-                } else {
-                    self.books = books
-                }
+                self.books.append(contentsOf: books)
                 self.tableView.reloadData()
             } else {
                 print(error ?? "Error getting movies data")
@@ -38,35 +34,26 @@ class BooksViewController: MediaTableViewController {
 
 extension BooksViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if let books = books {
-            return books.count + 1
-        } else {
-            return 0
-        }
+        return books.count + 1
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if let books = books {
-            if indexPath.row < books.count {
-                let bookCell = tableView.dequeueReusableCell(withIdentifier: MediaTableViewCell.reusableCellID(), for: indexPath) as! MediaTableViewCell
-                bookCell.configureCell(books[indexPath.row])
-                return bookCell
-            } else {
-                let loadCell = tableView.dequeueReusableCell(withIdentifier: reusableLoadCellID, for: indexPath)
-                return loadCell
-            }
+        if indexPath.row < books.count {
+            let bookCell = tableView.dequeueReusableCell(withIdentifier: MediaTableViewCell.reusableCellID(), for: indexPath) as! MediaTableViewCell
+            bookCell.configureCell(books[indexPath.row])
+            return bookCell
+        } else {
+            let loadCell = tableView.dequeueReusableCell(withIdentifier: reusableLoadCellID, for: indexPath)
+            return loadCell
         }
-        return UITableViewCell()
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if let books = books {
-            if indexPath.row < books.count {
-                book = books[indexPath.row]
-                self.performSegue(withIdentifier: selectionSegue, sender: self)
-            } else {
-                getBooks(offset: books.count)
-            }
+        if indexPath.row < books.count {
+            book = books[indexPath.row]
+            self.performSegue(withIdentifier: selectionSegue, sender: self)
+        } else {
+            getBooks(offset: books.count)
         }
     }
 }
