@@ -16,6 +16,10 @@ class WebViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureWebView()
+    }
+    
+    func configureWebView() {
         if let url = url {
             webView.loadRequest(URLRequest.init(url: url))
         }

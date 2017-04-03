@@ -26,6 +26,12 @@ class MediaDetailsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        configView()
+        checkHyperlinkButtonStatus()
+        configPreviewImageView()
+    }
+    
+    func configView() {
         if let object = object as? ListObject{
             configWith(object: object)
             if let movie = object as? Movie {
@@ -36,8 +42,6 @@ class MediaDetailsViewController: UIViewController {
                 configWithTop(object: object)
             }
         }
-        checkHyperlinkButtonStatus()
-        configPreviewImageView()
     }
     
     func configWith(object: ListObject) {
