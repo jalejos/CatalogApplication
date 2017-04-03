@@ -16,7 +16,7 @@ class BooksViewController: MediaTableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        getBooks(offset)
+        getBooks()
     }
     
     func getBooks(offset: Int = 0) {
