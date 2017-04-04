@@ -11,6 +11,7 @@ import ObjectMapper
 
 class Movie: ListObject {
     dynamic var id: String = ""
+    dynamic var headline: String = ""
     dynamic var rating: String = ""
     
     convenience required init?(map: Map) {
@@ -22,8 +23,8 @@ class Movie: ListObject {
     }
     
     override func mapping(map: Map) {
-        id <- (map["headline"])
         title <- (map["display_title"])
+        headline <- (map["headline"])
         date <- (map["publication_date"], DateFormatterTransform())
         imageString <- (map["multimedia.src"])
         author <- (map["byline"])
