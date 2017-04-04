@@ -12,7 +12,6 @@ import RealmSwift
 
 class MoviesDataLayer: DataLayer {
     static func getMovies(from offset: Int, onComplete: @escaping (_ movies: [Movie]?, _ error: Error?) -> Void) {
-        let realm = try! Realm()
         let movies = realm.objects(Movie.self)
         if movies.count > offset + offsetSize {
             let moviesArray = Array(movies)

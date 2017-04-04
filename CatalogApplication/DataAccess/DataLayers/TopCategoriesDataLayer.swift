@@ -12,7 +12,6 @@ import RealmSwift
 
 class TopCategoriesDataLayer: DataLayer{
     static func getTop(category: Category, onComplete: @escaping (_ objects: [TopObject]?, _ error: Error?) -> Void) {
-        let realm = try! Realm()
         let objects = realm.objects(TopObject.self)
         if objects.count > 0 {
             let objectsArray = Array(objects)

@@ -12,7 +12,6 @@ import RealmSwift
 
 class BooksDataLayer: DataLayer {
     static func getBooks(from offset: Int, onComplete: @escaping (_ books: [Book]?, _ error: Error?) -> Void) {
-        let realm = try! Realm()
         let books = realm.objects(Book.self)
         if books.count > offset + offsetSize {
             let booksArray = Array(books)
