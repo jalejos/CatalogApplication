@@ -23,10 +23,15 @@ class MediaDetailsViewController: UIViewController {
     var object: Any?
     var linkURL: URL?
     let defaultBookImageName = "book-icon"
-    let selectionSegue = "WebSegue"
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        configView()
+        checkHyperlinkButtonStatus()
+        configPreviewImageView()
+    }
+    
+    func configView() {
         if let object = object as? ListObject{
             configWith(object: object)
             if let movie = object as? Movie {
@@ -37,9 +42,6 @@ class MediaDetailsViewController: UIViewController {
                 configWithTop(object: object)
             }
         }
-        checkHyperlinkButtonStatus()
-        configPreviewImageView()
-        // Do any additional setup after loading the view.
     }
     
     func configWith(object: ListObject) {
@@ -114,7 +116,7 @@ extension MediaDetailsViewController {
 
 extension MediaDetailsViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == selectionSegue {
+        if segue.identifier == SegueHandler.webSegue.rawValue {
             let webDisplay = segue.destination as! WebViewController
             webDisplay.url = linkURL
         }

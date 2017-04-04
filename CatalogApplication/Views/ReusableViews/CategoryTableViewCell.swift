@@ -13,6 +13,10 @@ class CategoryTableViewCell: UITableViewCell {
     @IBOutlet weak var iconImageView: UIImageView!
     @IBOutlet weak var categoryLabel: UILabel!
     
+    static func reusableCellID() -> String {
+        return String(describing: self)
+    }
+    
     func configWithCategory (category: String) {
         categoryLabel.text = category
     }

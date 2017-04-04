@@ -10,17 +10,11 @@ import UIKit
 
 class CategoryTableViewController: MediaTableViewController {
     
-    var tableObjects: [TopObject]?
-    var object: TopObject?
-    let selectionSegue = "CategorySegue"
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
+    var tableObjects: [TopObject] = []
 
-    func configureWith(category: Categories) {
+    func configureWith(category: Category) {
         TopCategoriesDataLayer.getTop(category: category) { (objects, error) in
-            if objects != nil {
+            if let objects = objects {
                 self.tableObjects = objects
                 self.tableView.reloadData()
             } else {
@@ -32,34 +26,24 @@ class CategoryTableViewController: MediaTableViewController {
 
 extension CategoryTableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if let tableObjects = tableObjects {
-            return tableObjects.count
-        } else {
-            return 0
-        }
+        return tableObjects.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: mediaCellId, for: indexPath) as! MediaTableViewCell
-        if let tableObjects = tableObjects {
-            cell.configureCell(tableObjects[indexPath.row])
-        }
+        let cell = tableView.dequeueReusableCell(withIdentifier: MediaTableViewCell.reusableCellID(), for: indexPath) as! MediaTableViewCell
+        cell.configureCell(tableObjects[indexPath.row])
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if let tableObjects = tableObjects {
-            object = tableObjects[indexPath.row]
-            self.performSegue(withIdentifier: selectionSegue, sender: self)
-        }
-    }
+        self.performSegue(withIdentifier: SegueHandler.categorySegue.rawValue, sender: tableObjects[indexPath.row])    }
 }
 
 extension CategoryTableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == selectionSegue {
+        if segue.identifier == SegueHandler.categorySegue.rawValue {
             let detailsView = segue.destination as! MediaDetailsViewController
-            detailsView.object = object
+            detailsView.object = sender as? TopObject
         }
     }
 }

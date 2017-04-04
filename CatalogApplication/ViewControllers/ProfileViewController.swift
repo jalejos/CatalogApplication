@@ -17,8 +17,6 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var logoutButton: FBSDKLoginButton!
-    
-    let logoutSegue = "logoutSegue"
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,6 +56,6 @@ class ProfileViewController: UIViewController {
     }
     
     func userLoggedOut() {
-        self.performSegue(withIdentifier: logoutSegue, sender: self)
+        self.performSegue(withIdentifier: SegueHandler.logoutSegue.rawValue, sender: self)
     }
 }

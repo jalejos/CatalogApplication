@@ -11,26 +11,16 @@ import FacebookCore
 import FBSDKLoginKit
 
 class ViewController: UIViewController {
-    
-    let loginSegue = "loginSegue"
 
     @IBOutlet weak var loginButton: FBSDKLoginButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        
         setupLoginButton()
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
         checkLoginStatus()
     }
 
@@ -47,7 +37,7 @@ class ViewController: UIViewController {
     }
     
     func userLoggedIn() {
-        self.performSegue(withIdentifier: loginSegue, sender: self)
+        self.performSegue(withIdentifier: SegueHandler.loginSegue.rawValue, sender: self)
     }
 
 }

@@ -7,9 +7,11 @@
 //
 
 import Foundation
+import RealmSwift
 
 class DataLayer {
     static let wrongContentError = NSError.init(domain: "", code: 204, userInfo: nil)
     static let jsonKey = "results"
     static let offsetSize = 20
+    static let realm = try! Realm()
 }
