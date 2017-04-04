@@ -20,7 +20,7 @@ class BooksViewController: MediaTableViewController {
     func getBooks(offset: Int = 0) {
         BooksDataLayer.getBooks(from: offset) { (books, error) in
             if let books = books {
-                self.books.append(contentsOf: books)
+                self.books = books
                 self.tableView.reloadData()
             } else {
                 print(error ?? "Error getting movies data")
